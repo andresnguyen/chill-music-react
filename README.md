@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Chill Music Reactjs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# How to use this project
+1. Run cmd: git clone https://github.com/thuongnguyen-it78/chill-music-reactjs.git
+2. Get location project and run cmd
+    - yarn install
+    - yarn start 
+    - Chill it 
 
-## Available Scripts
+## Library
+- react-router-dom 
+- react-redux 
+- query-string 
+- classnames 
+- axios 
+- @reduxjs/toolkit
+- node-sass@4.14.1
+- antd
+- @ant-design/icons
 
-In the project directory, you can run:
+## Routes
 
-### `yarn start`
+1. HOME: / 
+2. SEARCH: /search/{data}
+3. LIBRARY: 
+    - /library/albums (Danh sách album yêu thích)
+    - /library/songs (Danh sách bài hát yêu thích)
+    - /library/playlists (Danh sách playlist yêu thích)
+    - /library/my-playlists (Danh sách playlist tự tạo)
+    - /library/artists (Danh sách nghệ sỹ đang theo dõi)
+    - /library/uploads (Danh sách bài hát đã upload)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    - /library/history (Danh sách 20 bài hát nghe gần đây)
+    - /library/history/albums (Danh sách 20 album nghe gần đây)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+4. ARTISTS
+    - /artists/{slug} (Chọn một nghệ sỹ bất kì)
 
-### `yarn test`
+5. ALBUMS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    - /albums/{slug} (Chọn một albums bất kì)
+    
+4. AUTH: 
+    - /auth/login
+    - /auth/signup
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Convention
+1. Style CSS
+    - SCSS + BEM
+    - Chia theo từng block
+        - Block text
+        - Block color 
+        - Block box model 
+        - Block positon  
+        - Block display  
+        - Others
+    - Mỗi block chỉ nên 4-5 dòng
+    - [Link tham khảo ](https://www.youtube.com/watch?v=iNKwWRHCeWE)
+2. Style commit
+    - `<type>: <description>`
+    - example: docs: edit file readme
+``` 
+fix: pull request này thực hiện fix bug của dự án
+feat (feature): pull request này thực hiện một chức năng mới của dự án
+refactor: pull request này thực hiện refactor lại code hiện tại của dự án 
+(refactor hiểu đơn giản là việc "làm sạch" code, loại bỏ code smells, mà 
+không làm thay đổi chức năng hiện có)
+docs: pull request này thực hiện thêm/sửa đổi document của dự án
+style: pull request này thực hiện thay đổi UI của dự án mà không ảnh hưởng đến logic.
+perf: pull request này thực hiện cải thiện hiệu năng của dự án (VD: loại bỏ duplicate query, ...)
+vendor: pull request này thực hiện cập nhật phiên bản cho các packages, dependencies mà dự án đang sử dụng.
+chore: từ này dịch ra tiếng Việt là việc lặt vặt nên mình đoán là nó để chỉ những thay đổi
+không đáng kể trong code (ví dụ như thay đổi text chẳng hạn), vì mình cũng ít khi sử dụng type này.
+```

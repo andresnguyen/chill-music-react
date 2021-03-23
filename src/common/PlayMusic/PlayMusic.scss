@@ -1,0 +1,128 @@
+.footer-wrapper {
+    
+}
+
+.footer {
+    height: 100px;
+    background-color: #252525;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer-info {
+    color: var(--white-color);
+
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    width: 300px;
+
+}
+
+.info__img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.info__name > a {
+    text-decoration: none;
+    display: inline-block;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 3px;
+    margin-right: 10px;
+    color: var(--white-color);
+
+}
+
+.list-artist a{
+    
+    text-decoration: none;
+
+    color: #016cc9;
+
+    text-decoration: underline;
+    font-size: 1.1rem;
+
+}
+
+.list-artist a:not(:last-child) {
+    padding-right: 5px;
+}
+
+.footer-info > i {
+    font-size: 1.7rem;
+}
+
+
+
+.footer-playing {
+    color: var(--white-color);
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.footer-control {
+    font-size: 1.8rem;
+    width: 250px;
+    margin-bottom: 12px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-control > i {
+    display: inline-block;
+    padding: 12px;
+
+}
+.footer-control > i:hover {
+    cursor: pointer;
+}
+
+.footer-control > .icon-play {
+    border-radius: 50%;
+    color: #000;
+    background-color: var(--white-color);
+}
+
+.footer-feature {
+  width: 300px;  
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer-feature i {
+    color: var(--white-color);
+    font-size: 1.8rem;
+    padding: 12px;
+
+}
+
+.volume-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.progress-volume {
+    line-height: 41px;
+    color: var(--white-color);
+}

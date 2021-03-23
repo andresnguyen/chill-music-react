@@ -1,0 +1,9 @@
+.main-wrapper {
+    background-color: #F2F3F4;
+}
+.main {
+    height: calc(100vh - var(--footer-height));
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-top: var(--header-height);
+}
