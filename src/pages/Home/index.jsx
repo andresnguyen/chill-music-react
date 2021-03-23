@@ -1,15 +1,10 @@
-import React from 'react';
+import React from 'react'
 import './Home.scss'
 
-Home.propTypes = {
-    
-};
+Home.propTypes = {}
 
-function Home(props) {
-    return (
-        <div className="main">
-        </div>
-    );
+function Home() {
+    return <div className="main"></div>
 }
 
-export default Home;
+export default Home
