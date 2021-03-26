@@ -12,6 +12,7 @@ import App from './App'
 import configureStore from './store'
 const initialState = {}
 const { store } = configureStore(initialState)
+
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>

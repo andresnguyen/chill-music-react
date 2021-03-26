@@ -1,10 +1,15 @@
 import './assets/css/app.css'
 import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom'
 import routes from './app/route'
-
-const WaitingComponent = () => () => <div>loading</div>
+import { Suspense } from 'react'
 
 const PrivateRoute = () => <Redirect to="/sigin" />
+
+const WaitingComponent = (Component) => (props) => (
+    <Suspense fallback={<div>loading</div>}>
+        <Component {...props} />
+    </Suspense>
+)
 
 function App() {
     const showContent = () => {

@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
+import { getCurrentList } from '../../actions/playMusic'
 import './Header.scss'
 Header.propTypes = {}
 
 function Header() {
+    const dispatch = useDispatch()
+    useEffect(() => {
+        const data = dispatch(getCurrentList())
+        console.log(data)
+    }, [])
     return (
         <div className="header-wrapper">
             <header className="header">

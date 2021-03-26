@@ -1,4 +1,4 @@
-//main redux
 import { combineReducers } from 'redux'
-const reducer = combineReducers({})
+import playMusicReducer from './playMusic.reducer'
+const reducer = combineReducers({ playMusicReducer })
 export default reducer
