@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
 import playMusicReducer from './playMusic.reducer'
-const reducer = combineReducers({ playMusicReducer })
+import playerQueueReducer from './playerQueue.reducer'
+const reducer = combineReducers({ playMusicReducer, playerQueue: playerQueueReducer })
 export default reducer

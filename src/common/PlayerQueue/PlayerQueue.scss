@@ -1,0 +1,18 @@
+.player-queue {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32rem;
+    height: 100%;
+    background-color: #e2e3ee;
+    z-index: 100;
+    transform: translateX(100%);
+    opacity: 0.5;
+
+    transition: all 0.6s;
+}
+
+.player-queue--active {
+    transform: translateX(0);
+    opacity: 1;
+}

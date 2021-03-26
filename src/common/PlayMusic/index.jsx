@@ -2,16 +2,18 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './PlayMusic.scss'
-// import image from '../../assets/img/artist.jpg'
 import Slider from 'react-input-slider'
 import ReactTooltip from 'react-tooltip'
 import songApi from '../../api/songApi'
 import classnames from 'classnames'
 import helper from '../../utils'
+import { useDispatch } from 'react-redux'
+import { turnOffQueue, turnOnQueue } from '../../actions/playerQueue'
 
 PlayMusic.propTypes = {}
 
 function PlayMusic() {
+    const dispatch = useDispatch()
     const changingSliderRef = useRef(false)
     const changingTimeoutRef = useRef(null)
     const audioRef = useRef(null)
@@ -30,6 +32,8 @@ function PlayMusic() {
     const [repeat, setRepeat] = useState(0)
 
     const [currentTime, setCurrentTime] = useState(0)
+    const [isMute, setIsMute] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
         const getSongs = async () => {
@@ -39,13 +43,24 @@ function PlayMusic() {
         getSongs()
     }, [])
 
+    // check every next song
     useEffect(() => {
         HandlePlayMode()
     }, [currentIndex])
 
+    // check every volume change
     useEffect(() => {
         audioRef.current.volume = valueVolumeSlider / 100
-    }, [])
+    }, [valueVolumeSlider])
+
+    const handleQueueClick = () => {
+        setIsOpen(!isOpen)
+        if (!isOpen) {
+            return dispatch(turnOnQueue())
+        }
+
+        dispatch(turnOffQueue())
+    }
 
     const handleMusicSliderChange = ({ x }) => {
         setValueMusicSlider(x)
@@ -64,9 +79,21 @@ function PlayMusic() {
     }
 
     const handleVolumeSliderChange = ({ x }) => {
-        audioRef.current.volume = x / 100
         localStorage.setItem('volume', x)
         setValueVolumeSlider(x)
+    }
+
+    const handleVolumeClick = () => {
+        console.log('click')
+        setIsMute(!isMute)
+
+        if (!isMute) {
+            localStorage.setItem('volume', valueVolumeSlider)
+            setValueVolumeSlider(0)
+            return
+        }
+
+        setValueVolumeSlider(localStorage.getItem('volume'))
     }
 
     const handlePlayClick = () => {
@@ -91,22 +118,18 @@ function PlayMusic() {
 
     const HandlePlayMode = () => {
         if (!audioRef.current.src) return
-
         audioRef.current.play()
         setIsPlaying(true)
     }
 
     const handleNextClick = () => {
         if (currentIndex === songs.length - 1 && repeat === 1) return setCurrentIndex(0)
-
         if (currentIndex === songs.length - 1) return
-
         return setCurrentIndex(currentIndex + 1)
     }
 
     const handleRandomClick = () => {
         setIsRamdom(!isRandom)
-
         if (!isRandom) {
         } else {
         }
@@ -132,6 +155,7 @@ function PlayMusic() {
         }
         handleNextClick()
     }
+
     return (
         <div className="footer-wrapper">
             <audio
@@ -208,14 +232,23 @@ function PlayMusic() {
                 </div>
 
                 <div className="footer-feature">
-                    <i className="fal fa-toggle-off"></i>
-                    {/* <i className="fal fa-toggle-on"></i> */}
+                    <i
+                        className={classnames('fal', { 'fa-toggle-off': !isOpen }, { 'fa-toggle-on': isOpen })}
+                        onClick={handleQueueClick}
+                    ></i>
                     <div className="volume-wrapper">
-                        <i className="fal fa-volume"></i>
+                        <i
+                            className={classnames(
+                                'fal',
+                                { 'fa-volume-mute': valueVolumeSlider === 0 },
+                                { 'fa-volume-down': valueVolumeSlider <= 50 },
+                                { 'fa-volume': valueVolumeSlider > 50 }
+                            )}
+                            onClick={handleVolumeClick}
+                        ></i>
+
                         <Slider axis="x" x={valueVolumeSlider} onChange={handleVolumeSliderChange} />
                     </div>
-                    {/* <i className="fal fa-volume-down"></i> */}
-                    {/* <i className="fal fa-volume-mute"></i> */}
                 </div>
             </footer>
 
