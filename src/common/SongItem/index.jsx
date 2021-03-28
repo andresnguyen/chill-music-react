@@ -1,12 +1,12 @@
 import React from 'react'
 import './SongItem.scss'
-import img from '../../assets/img/artist.jpg'
+// import img from '../../assets/img/artist.jpg'
 import { Link } from 'react-router-dom'
 
 SongItem.propTypes = {}
 
-function SongItem() {
-    const url = `url(${img})`
+function SongItem({ song }) {
+    const url = `url(${song.image})`
     const urlPlay = `url(https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/icons/icon-playing.gif)`
     return (
         <div className="song-item">
@@ -17,11 +17,12 @@ function SongItem() {
             </Link>
 
             <div className="song-item__info">
-                <h3 className="song-item__name">Ai Là Người Thương Em</h3>
+                <h3 className="song-item__name">{song.title}</h3>
 
                 <div className="artist-list">
-                    <Link to="">Quan AP</Link>
-                    <Link to="">K-ICM</Link>
+                    {song.artists.split('-').map((artist) => {
+                        return <Link to="">{artist.trim()}</Link>
+                    })}
                 </div>
             </div>
             <div className="song-item__others">
