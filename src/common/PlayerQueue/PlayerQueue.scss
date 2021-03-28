@@ -1,4 +1,18 @@
 .player-queue {
+    &::-webkit-scrollbar {
+        width: 0.5em;
+        height: 97px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #fec6c5;
+        border-radius: 3px;
+
+        &:hover {
+            background: #ffb6b5;
+        }
+    }
+
     position: absolute;
     top: 0;
     right: 0;
