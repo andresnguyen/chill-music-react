@@ -1,0 +1,159 @@
+.signup-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.signup {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 80%;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+
+.signup-heading {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #212144;
+    margin-bottom: 30px;
+}
+.signup-container {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 470px;
+    margin: 0 auto;
+}
+
+.blank-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.signup {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 80%;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+.signup-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.signup-container {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 470px;
+    margin: 0 auto;
+}
+.signup-heading {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #212144;
+    margin-bottom: 30px;
+}
+.signup-form {
+    width: 100%;
+}
+.signup-term {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.signup-term-link {
+    color: #2979ff;
+}
+
+@media screen and (max-width: 1023px) {
+    body:before,
+    body:after {
+        display: none;
+    }
+
+    .signup {
+        display: block;
+    }
+    .signup-container {
+        padding: 50px 20px;
+    }
+    .signup-image {
+        display: none;
+    }
+}
+@media screen and (max-width: 767px) {
+    .signup-container {
+        max-width: 100%;
+    }
+}
+
+.input-focus-effect {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.input-focus-effect input {
+    padding: 2.5rem 1rem 1rem;
+    border: 1px solid #b3b3b3;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    transition: border 0.25s linear;
+    background-color: transparent;
+    outline: none;
+}
+.input-focus-effect input:focus {
+    border-color: var(--primary);
+}
+.input-focus-effect input:focus + label {
+    transform: translateY(0);
+    top: 1rem;
+}
+.input-focus-effect label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #999;
+    transition: 0.25s linear;
+    font-size: 1.1rem;
+}
+.btn--social {
+    display: flex;
+    align-content: center;
+}
+
+.btn--social span {
+    flex-grow: 1;
+}
+
+.btn--social i {
+    font-size: 2rem;
+}

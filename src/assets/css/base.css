@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --white-color : #fff;
-    --black-color : #000;
-    --sub-color : #b3b3b3;
-    --border-color : #dbdbdb;
+    --white-color: #fff;
+    --black-color: #000;
+    --sub-color: #b3b3b3;
+    --border-color: #dbdbdb;
     --primary-color: #1db954;
     --shadow-color: #d5d5d5;
-    
+
     --header-bg: #2c3e50;
 
-    --header-height : 70px;
+    --header-height: 70px;
     --footer-height: 100px;
+    --font: 'Poppins', sans-serif;
 }
 
 * {
@@ -28,4 +29,3 @@ html {
 }
 
 /* Animation */
-

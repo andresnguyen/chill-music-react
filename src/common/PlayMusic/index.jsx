@@ -8,7 +8,7 @@ import songApi from '../../api/songApi'
 import classnames from 'classnames'
 import helper from '../../utils'
 import { useDispatch } from 'react-redux'
-import { turnOffQueue, turnOnQueue } from '../../actions/playerQueue'
+import { turnOffQueue, turnOnQueue } from '../../actions/playMusic'
 
 PlayMusic.propTypes = {}
 
@@ -235,6 +235,8 @@ function PlayMusic() {
                     <i
                         className={classnames('fal', { 'fa-toggle-off': !isOpen }, { 'fa-toggle-on': isOpen })}
                         onClick={handleQueueClick}
+                        data-tip=""
+                        data-for="on-list-id"
                     ></i>
                     <div className="volume-wrapper">
                         <i
@@ -275,13 +277,9 @@ function PlayMusic() {
                 {isRandom ? <span> Tắt phát ngẫu nhiên</span> : <span> Bật phát ngẫu nhiên</span>}
             </ReactTooltip>
 
-            {/* <ReactTooltip id="on-list-id" place="top" effect="solid">
-                <span> Bật danh sách phát</span>
-            </ReactTooltip> */}
-
-            {/* <ReactTooltip id="off-list-id" place="top" effect="solid">
-                <span> Tắt danh sách phát</span>
-            </ReactTooltip> */}
+            <ReactTooltip id="on-list-id" place="top" effect="solid">
+                {isOpen ? <span> Tắt danh sách phát</span> : <span> Bật danh sách phát</span>}
+            </ReactTooltip>
         </div>
     )
 }

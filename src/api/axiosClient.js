@@ -2,7 +2,7 @@ import axios from 'axios'
 import queryString from 'query-string'
 
 const axiosClient = axios.create({
-    baseURL: 'https://chill-music-nodejs.herokuapp.com/',
+    baseURL: 'https://mp3-music-ios.herokuapp.com/',
     headers: {
         'Content-Type': 'application/json',
     },
@@ -15,6 +15,7 @@ axiosClient.interceptors.request.use(
     function (config) {
         // Handle token here...
         // Do something before request is sent
+        console.log(config)
         return config
     },
     function (error) {

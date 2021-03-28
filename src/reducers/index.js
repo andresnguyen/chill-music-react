@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import playMusicReducer from './playMusic.reducer'
-import playerQueueReducer from './playerQueue.reducer'
-const reducer = combineReducers({ playMusicReducer, playerQueue: playerQueueReducer })
+import authReducer from './auth.reducer'
+
+const reducer = combineReducers({ playMusicReducer, authReducer })
 export default reducer
