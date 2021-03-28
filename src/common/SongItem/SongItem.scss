@@ -11,6 +11,16 @@
         cursor: pointer;
     }
 
+    &:hover .fa-play.song-item__play {
+        visibility: visible;
+        opacity: 1;
+    }
+    .fa-play.song-item__play {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.1s;
+    }
+
     &:hover .song-item__others {
         opacity: 1 !important;
     }
@@ -55,7 +65,7 @@
         transform: translate(-50%, -50%);
 
         font-size: 1.5rem;
-        color: var(--primary-color);
+        color: var(--white-color);
     }
 
     &__info {

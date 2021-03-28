@@ -5,15 +5,18 @@ import { Link } from 'react-router-dom'
 
 SongItem.propTypes = {}
 
-function SongItem({ song }) {
+function SongItem({ song, current }) {
     const url = `url(${song.image})`
     const urlPlay = `url(https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/icons/icon-playing.gif)`
     return (
         <div className="song-item">
             <Link to="" className="song-item__img" style={{ backgroundImage: url }}>
                 <div className="song-item__opacity"></div>
-                {/* <i class="fas fa-play song-item__play"></i> */}
-                <i className="action-play song-item__play" style={{ backgroundImage: urlPlay }}></i>
+                {current ? (
+                    <i className="action-play song-item__play" style={{ backgroundImage: urlPlay }}></i>
+                ) : (
+                    <i class="fas fa-play song-item__play"></i>
+                )}
             </Link>
 
             <div className="song-item__info">

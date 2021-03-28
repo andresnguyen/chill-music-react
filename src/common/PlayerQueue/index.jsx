@@ -22,9 +22,13 @@ function PlayerQueue() {
             <h3 className="queue-title">Danh sách phát</h3>
 
             <div className="front-songs">
-                {frontSongs.map((song, index) => (
-                    <SongItem index={index} song={song} />
-                ))}
+                {frontSongs.map((song, index, arr) => {
+                    let current = false
+                    if (index === arr.length - 1) {
+                        current = true
+                    }
+                    return <SongItem index={index} song={song} current={current} />
+                })}
             </div>
 
             <div className="back-songs">
