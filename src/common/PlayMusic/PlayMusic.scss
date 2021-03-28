@@ -39,8 +39,6 @@
 }
 
 .list-artist a {
-    text-decoration: none;
-
     color: var(--sub-color);
 
     text-decoration: underline;
@@ -48,7 +46,7 @@
 }
 
 .list-artist a:not(:last-child) {
-    padding-right: 5px;
+    margin-right: 5px;
 }
 
 .footer-info > i {

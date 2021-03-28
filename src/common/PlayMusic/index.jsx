@@ -8,12 +8,35 @@ import songApi from '../../api/songApi'
 import classnames from 'classnames'
 import helper from '../../utils'
 import { useDispatch } from 'react-redux'
-import { turnOffQueue, turnOnQueue } from '../../actions/playMusic'
+import { changeCurrentIndex, changeSongs, toggleOpen, toggleRandom } from '../../actions/playMusic'
+import { useSelector } from 'react-redux'
 
 PlayMusic.propTypes = {}
 
 function PlayMusic() {
     const dispatch = useDispatch()
+
+    const currentIndex = useSelector((state) => state.playMusicReducer.currentIndex)
+    function setCurrentIndex(value) {
+        dispatch(changeCurrentIndex(value))
+    }
+
+    const songs = useSelector((state) => state.playMusicReducer.songs)
+    function setSongs(value) {
+        dispatch(changeSongs(value))
+    }
+    const isRandom = useSelector((state) => state.playMusicReducer.isRandom)
+
+    function setIsRandom(value) {
+        dispatch(toggleRandom(value))
+    }
+
+    const isOpen = useSelector((state) => state.playMusicReducer.isOpen)
+
+    function setIsOpen(value) {
+        dispatch(toggleOpen(value))
+    }
+
     const changingSliderRef = useRef(false)
     const changingTimeoutRef = useRef(null)
     const audioRef = useRef(null)
@@ -24,16 +47,17 @@ function PlayMusic() {
         const volume = localStorage.getItem('volume') || 60
         return volume
     })
+
     const [isPlaying, setIsPlaying] = useState(false)
 
-    const [songs, setSongs] = useState([])
-    const [currentIndex, setCurrentIndex] = useState(0)
-    const [isRandom, setIsRamdom] = useState(false)
+    // const [songs, setSongs] = useState([])
+    // const [currentIndex, setCurrentIndex] = useState(0)
+    // const [isRandom, setIsRandom] = useState(false)
     const [repeat, setRepeat] = useState(0)
 
     const [currentTime, setCurrentTime] = useState(0)
     const [isMute, setIsMute] = useState(false)
-    const [isOpen, setIsOpen] = useState(false)
+    // const [isOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
         const getSongs = async () => {
@@ -55,11 +79,6 @@ function PlayMusic() {
 
     const handleQueueClick = () => {
         setIsOpen(!isOpen)
-        if (!isOpen) {
-            return dispatch(turnOnQueue())
-        }
-
-        dispatch(turnOffQueue())
     }
 
     const handleMusicSliderChange = ({ x }) => {
@@ -129,7 +148,7 @@ function PlayMusic() {
     }
 
     const handleRandomClick = () => {
-        setIsRamdom(!isRandom)
+        setIsRandom(!isRandom)
         if (!isRandom) {
         } else {
         }

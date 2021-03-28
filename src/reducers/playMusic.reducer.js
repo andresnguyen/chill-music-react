@@ -1,52 +1,39 @@
-import {
-    GET_CURRENT_LIST,
-    GET_CURRENT_LIST_SUCCESS,
-    GET_CURRENT_LIST_FAILED,
-    CHANGE_AUDIO_VOLUME,
-    ON_QUEUE,
-    OFF_QUEUE,
-} from '../actions/playMusic'
+/* eslint-disable no-unused-vars */
+import { CHANGE_CURRENT_INDEX, CHANGE_SONGS, TOGGLE_OPEN, TOGGLE_RANDOM } from '../actions/playMusic'
+
+const songs = localStorage.getItem('songs') || []
+const currentIndex = localStorage.getItem('currentIndex') || 0
+const isRandom = localStorage.getItem('isRandom') || false
 
 const initialState = {
-    isLoading: false,
-    data: null,
-    audioVolume: 1,
+    songs,
+    currentIndex,
     isOpen: false,
+    isRandom,
+    isLoading: false,
 }
 
 const playMusicReducer = (state = initialState, { type, payload }) => {
     switch (type) {
-        case ON_QUEUE:
+        case TOGGLE_RANDOM:
             return {
                 ...state,
-                isOpen: true,
+                isRandom: payload,
             }
-        case OFF_QUEUE:
+        case TOGGLE_OPEN:
             return {
                 ...state,
-                isOpen: false,
+                isOpen: payload,
             }
-        case GET_CURRENT_LIST:
+        case CHANGE_CURRENT_INDEX:
             return {
                 ...state,
-                isLoading: true,
+                currentIndex: payload,
             }
-        case GET_CURRENT_LIST_SUCCESS:
+        case CHANGE_SONGS:
             return {
                 ...state,
-                isLoading: false,
-                data: payload.data,
-            }
-        case GET_CURRENT_LIST_FAILED:
-            return {
-                ...state,
-                isLoading: false,
-            }
-
-        case CHANGE_AUDIO_VOLUME:
-            return {
-                ...state,
-                audioVolume: payload,
+                songs: payload,
             }
         default:
             return state

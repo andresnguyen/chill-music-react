@@ -21,11 +21,15 @@
         overflow: hidden;
     }
 
+    &__img:hover &__opacity {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
     &__opacity {
         height: 100%;
         width: 100%;
 
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0);
     }
 
     &__play {
@@ -59,6 +63,17 @@
 
 .artist-list {
     font-size: 12px;
+    display: flex;
+
+    a {
+        text-decoration: underline;
+        list-style: none;
+        color: var(--black-color);
+    }
+
+    a:not(:last-child) {
+        margin-right: 5px;
+    }
 }
 
 .song-item__others {
