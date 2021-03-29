@@ -1,5 +1,12 @@
 /* eslint-disable no-unused-vars */
-import { CHANGE_CURRENT_INDEX, CHANGE_SONGS, TOGGLE_OPEN, TOGGLE_PLAY, TOGGLE_RANDOM } from '../actions/playMusic'
+import {
+    CHANGE_CURRENT_INDEX,
+    CHANGE_SONGS,
+    SONG_CLICK,
+    TOGGLE_OPEN,
+    TOGGLE_PLAY,
+    TOGGLE_RANDOM,
+} from '../actions/playMusic'
 
 const songs = JSON.parse(localStorage.getItem('songs')) || []
 const currentIndex = JSON.parse(localStorage.getItem('currentIndex')) || 0
@@ -85,6 +92,23 @@ const playMusicReducer = (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 songs: payload,
+            }
+
+        case SONG_CLICK:
+            let index = 0
+            let songs = state.songs
+            let length = songs.length
+
+            for (let i = 0; i < length; i++) {
+                if (songs[i].id === payload) {
+                    index = i
+                    break
+                }
+            }
+
+            return {
+                ...state,
+                currentIndex: index,
             }
         default:
             return state

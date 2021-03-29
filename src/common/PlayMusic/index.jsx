@@ -200,8 +200,9 @@ function PlayMusic() {
                         <Link>{songs[currentIndex]?.title}</Link>
 
                         <div className="list-artist">
-                            <Link>Jack</Link>
-                            <Link>K-ICM</Link>
+                            {songs[currentIndex]?.artists.split('-').map((artist) => {
+                                return <Link to="">{artist.trim()}</Link>
+                            })}
                         </div>
                     </div>
 

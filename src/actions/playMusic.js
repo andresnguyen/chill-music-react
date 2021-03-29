@@ -10,6 +10,13 @@ export const CHANGE_SONGS = 'CHANGE_SONGS'
 export const TOGGLE_OPEN = 'TOGGLE_OPEN'
 export const TOGGLE_PLAY = 'TOGGLE_PLAY'
 
+export const SONG_CLICK = 'SONG_CLICK'
+
+export const songClick = (payload) => ({
+    type: SONG_CLICK,
+    payload,
+})
+
 export const toggleRandom = (payload) => ({
     type: TOGGLE_RANDOM,
     payload,
