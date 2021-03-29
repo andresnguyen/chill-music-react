@@ -32,8 +32,6 @@ const playMusicReducer = (state = initialState, { type, payload }) => {
                 newSongs.unshift(currentSong[0])
                 const currentIndex = 0
 
-                console.log(newSongs)
-
                 return {
                     ...state,
                     isRandom: payload,
@@ -48,8 +46,6 @@ const playMusicReducer = (state = initialState, { type, payload }) => {
              */
 
             const oldSongs = JSON.parse(localStorage.getItem('oldSongs') || [])
-
-            console.log(oldSongs)
 
             const currentSongId = state.songs[state.currentIndex].id
 
