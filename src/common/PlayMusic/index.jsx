@@ -8,7 +8,7 @@ import songApi from '../../api/songApi'
 import classnames from 'classnames'
 import helper from '../../utils'
 import { useDispatch } from 'react-redux'
-import { changeCurrentIndex, changeSongs, toggleOpen, toggleRandom } from '../../actions/playMusic'
+import { changeCurrentIndex, changeSongs, toggleOpen, togglePlay, toggleRandom } from '../../actions/playMusic'
 import { useSelector } from 'react-redux'
 
 PlayMusic.propTypes = {}
@@ -37,6 +37,12 @@ function PlayMusic() {
         dispatch(toggleOpen(value))
     }
 
+    const isPlaying = useSelector((state) => state.playMusicReducer.isPlaying)
+
+    function setIsPlaying(value) {
+        dispatch(togglePlay(value))
+    }
+
     const changingSliderRef = useRef(false)
     const changingTimeoutRef = useRef(null)
     const audioRef = useRef(null)
@@ -48,7 +54,7 @@ function PlayMusic() {
         return volume
     })
 
-    const [isPlaying, setIsPlaying] = useState(false)
+    // const [isPlaying, setIsPlaying] = useState(false)
 
     // const [songs, setSongs] = useState([])
     // const [currentIndex, setCurrentIndex] = useState(0)

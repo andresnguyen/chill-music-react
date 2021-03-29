@@ -8,6 +8,7 @@ export const TOGGLE_RANDOM = 'TOGGLE_RANDOM'
 export const CHANGE_CURRENT_INDEX = 'CHANGE_CURRENT_INDEX'
 export const CHANGE_SONGS = 'CHANGE_SONGS'
 export const TOGGLE_OPEN = 'TOGGLE_OPEN'
+export const TOGGLE_PLAY = 'TOGGLE_PLAY'
 
 export const toggleRandom = (payload) => ({
     type: TOGGLE_RANDOM,
@@ -16,6 +17,11 @@ export const toggleRandom = (payload) => ({
 
 export const toggleOpen = (payload) => ({
     type: TOGGLE_OPEN,
+    payload,
+})
+
+export const togglePlay = (payload) => ({
+    type: TOGGLE_PLAY,
     payload,
 })
 

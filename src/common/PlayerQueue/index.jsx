@@ -2,8 +2,6 @@
 import classnames from 'classnames'
 import React from 'react'
 import { useSelector } from 'react-redux'
-import ListSongsBack from '../ListSongsBack'
-import ListSongsFront from '../ListSongsFront'
 import SongItem from '../SongItem'
 import './PlayerQueue.scss'
 

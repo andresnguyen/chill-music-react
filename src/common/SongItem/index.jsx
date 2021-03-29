@@ -2,21 +2,24 @@ import React from 'react'
 import './SongItem.scss'
 // import img from '../../assets/img/artist.jpg'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 SongItem.propTypes = {}
 
 function SongItem({ song, current }) {
+    const isPlaying = useSelector((state) => state.playMusicReducer.isPlaying)
     const url = `url(${song.image})`
     const urlPlay = `url(https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/icons/icon-playing.gif)`
+
     return (
         <div className="song-item">
             <Link to="" className="song-item__img" style={{ backgroundImage: url }}>
                 <div className="song-item__opacity"></div>
-                {current ? (
+                {current && isPlaying && (
                     <i className="action-play song-item__play" style={{ backgroundImage: urlPlay }}></i>
-                ) : (
-                    <i class="fas fa-play song-item__play"></i>
                 )}
+                {current && !isPlaying && <i class="fas fa-play song-item__play song-item__play--active"></i>}
+                {!current && <i class="fas fa-play song-item__play"></i>}
             </Link>
 
             <div className="song-item__info">
