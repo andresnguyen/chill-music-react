@@ -174,7 +174,6 @@ function PlayMusic() {
 
     const handleSongEnded = () => {
         if (repeat === 2) {
-            audioRef.current.loop = true
             audioRef.current.play()
             return
         }

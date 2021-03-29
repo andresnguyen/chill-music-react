@@ -1,10 +1,15 @@
 import React from 'react'
+import AlbumItem from '../../common/AlbumItem'
 import './Home.scss'
 
 Home.propTypes = {}
 
 function Home() {
-    return <div className="main">{/* <Slider axis="x" x={value} onChange={({ x }) => setValue(x)} /> */}</div>
+    return (
+        <div className="main">
+            <AlbumItem />
+        </div>
+    )
 }
 
 export default Home
