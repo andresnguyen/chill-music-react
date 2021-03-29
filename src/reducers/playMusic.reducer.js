@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { CHANGE_CURRENT_INDEX, CHANGE_SONGS, TOGGLE_OPEN, TOGGLE_PLAY, TOGGLE_RANDOM } from '../actions/playMusic'
 
-const songs = JSON.parse(localStorage.getItem('songs') || [])
-const currentIndex = JSON.parse(localStorage.getItem('currentIndex') || 0)
-const isRandom = JSON.parse(localStorage.getItem('isRandom') || false)
+const songs = JSON.parse(localStorage.getItem('songs')) || []
+const currentIndex = JSON.parse(localStorage.getItem('currentIndex')) || 0
+const isRandom = JSON.parse(localStorage.getItem('isRandom')) || false
 
 const initialState = {
     songs,
@@ -45,7 +45,7 @@ const playMusicReducer = (state = initialState, { type, payload }) => {
              * 3.
              */
 
-            const oldSongs = JSON.parse(localStorage.getItem('oldSongs') || [])
+            const oldSongs = JSON.parse(localStorage.getItem('oldSongs')) || []
 
             const currentSongId = state.songs[state.currentIndex].id
 
