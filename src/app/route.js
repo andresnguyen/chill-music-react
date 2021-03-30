@@ -5,6 +5,7 @@ import BlankLayout from '../layouts/BlankLayout'
 import SignIn from '../pages/SignIn'
 
 const Home = lazy(() => import('../pages/Home'))
+const Search = lazy(() => import('../pages/Search'))
 
 const route = [
     {
@@ -15,7 +16,14 @@ const route = [
         title: 'Trang Chủ',
         main: (props) => <Home router={props} />,
     },
-
+    {
+        path: '/search',
+        exact: true,
+        auth: false,
+        layout: SecurityLayout,
+        title: 'Tìm kiếm',
+        main: (props) => <Search router={props} />,
+    },
     {
         path: '/auth/login',
         exact: true,

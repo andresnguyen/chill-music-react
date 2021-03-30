@@ -1,10 +1,6 @@
-.main-wrapper {
-    background-color: #f2f3f4;
-    position: relative;
-}
 .main {
-    height: calc(100vh - var(--footer-height));
-    overflow: scroll;
+    // height: calc(100vh - var(--footer-height));
+    // overflow: scroll;
     overflow-x: hidden;
-    padding-top: var(--header-height);
+    // padding-top: var(--header-height);
 }

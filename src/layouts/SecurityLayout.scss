@@ -1,0 +1,8 @@
+.security-layout-wrapper {
+    background-color: #f2f3f4;
+    position: relative;
+    height: calc(100vh - var(--footer-height));
+    // overflow: scroll;
+    // overflow-x: hidden;
+    padding-top: var(--header-height);
+}
