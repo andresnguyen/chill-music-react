@@ -1,13 +1,19 @@
 import React from 'react'
 import './AlbumItem.scss'
-import img from '../../assets/img/artist.jpg'
-AlbumItem.propTypes = {}
-
-function AlbumItem() {
-    const url = `url(${img})`
+import PropTypes from 'prop-types'
+// import img from '../../assets/img/artist.jpg'
+AlbumItem.propTypes = {
+    album: PropTypes.object,
+}
+AlbumItem.defaultProps = {
+    album: {},
+}
+function AlbumItem({ album }) {
+    // const url = `url(${img})`
+    const { img, title, desc } = album
     return (
         <div className="album-item">
-            <div className="img-wrapper" style={{ backgroundImage: url }}>
+            <div className="img-wrapper" style={{ backgroundImage: `url(${img})` }}>
                 <div className="album-item__tool">
                     {/* <i className="fas fa-heart"></i>  */}
                     {/* <i class="fas fa-play icon-play"></i> */}
@@ -25,9 +31,9 @@ function AlbumItem() {
                 <div className="opactity"></div>
             </div>
 
-            <h3 className="album-item__title">Hương Đêm Bay Xa</h3>
+            <h3 className="album-item__title">{title}</h3>
 
-            <span className="album-item__desc">Nhạc trẻ - Hariwon</span>
+            <span className="album-item__desc">{desc}</span>
         </div>
     )
 }

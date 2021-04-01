@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+#playlist-carousel {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 280px;
+}
+
+#playlist-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    font-family: 'DM Sans', sans-serif;
+    transition: backgroud 0.4s ease-in;
+    // background-color: #342b3f;
+
+    &.blue {
+        background-color: #428aa6;
+    }
+}
+
+#playlist-carousel input[type='radio'] {
+    display: none;
+}
+
+.playlist-carousel-card {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.playlist-carousel-container {
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playlist-carousel-playlist-carousel-cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    // margin-bottom: 20px;
+}
+
+#playlist-carousel img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#playlist-carousel-item-1:checked ~ .playlist-carousel-playlist-carousel-cards #song-3,
+#playlist-carousel-item-2:checked ~ .playlist-carousel-playlist-carousel-cards #playlist-carousel-song-1,
+#playlist-carousel-item-3:checked ~ .playlist-carousel-playlist-carousel-cards #song-2 {
+    transform: translatex(-60%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#playlist-carousel-item-1:checked ~ .playlist-carousel-playlist-carousel-cards #song-2,
+#playlist-carousel-item-2:checked ~ .playlist-carousel-playlist-carousel-cards #song-3,
+#playlist-carousel-item-3:checked ~ .playlist-carousel-playlist-carousel-cards #playlist-carousel-song-1 {
+    transform: translatex(60%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#playlist-carousel-item-1:checked ~ .playlist-carousel-playlist-carousel-cards #playlist-carousel-song-1,
+#playlist-carousel-item-2:checked ~ .playlist-carousel-playlist-carousel-cards #song-2,
+#playlist-carousel-item-3:checked ~ .playlist-carousel-playlist-carousel-cards #song-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+
+    img {
+        box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+    }
+}
+// #playlist-carousel-item-2:checked ~ .player #test {
+//     transform: translateY(0);
+// }
+
+// #playlist-carousel-item-2:checked ~ .player #test {
+//     transform: translateY(-40px);
+// }
+
+// #playlist-carousel-item-3:checked ~ .player #test {
+//     transform: translateY(-80px);
+// }

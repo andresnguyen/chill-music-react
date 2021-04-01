@@ -1,8 +1,30 @@
-.security-layout-wrapper {
-    background-color: #f2f3f4;
-    position: relative;
+.top-layout {
     height: calc(100vh - var(--footer-height));
-    // overflow: scroll;
-    // overflow-x: hidden;
-    padding-top: var(--header-height);
+    width: 100%;
+    position: fixed;
+    // z-index: 1;
+    // background-color: rebeccapurple;
+    overflow-x: hidden;
+}
+/* Style the content */
+.right-content {
+    margin-left: 200px;
+    // padding-left: 20px;
+    height: calc(100vh - var(--footer-height));
+    overflow-x: hidden;
+    // background-color: rgb(223, 183, 74);
+}
+.bottom-layout {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: var(--footer-height);
+    // background-color: gold;
+}
+.right-content-backgroud {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    cursor: default;
 }

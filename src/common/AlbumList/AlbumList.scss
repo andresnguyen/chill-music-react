@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+.albumlist-wrapper {
+    padding-top: 18px;
+    padding-bottom: 10px;
+}
+.albumlist-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 0px;
+}
+.albumlist-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.04em;
+    text-transform: none;
+    // padding: 0 10px;
+}
+.albumlist-seeall {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+}
+.albumlist-seeall:hover {
+    text-decoration: underline;
+}
+.albumlist-column {
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+    // background-color: red;
+    // margin-left: 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.albumlist-row {
+    // margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.albumlist-row:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 900px) {
+    .albumlist-column {
+        width: 33%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .albumlist-column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Style the counter cards */
+.albumlist-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    // padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    // background-color: red;
+}
+// .albumlist-test {
+//     width: 200px;
+//     height: 200px;
+//     background-color: red;
+// }
