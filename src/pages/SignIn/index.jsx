@@ -20,7 +20,7 @@ function SignIn() {
                 <img
                     src="https://cdn.dribbble.com/users/47000/screenshots/14536475/media/4448b07811608dff11183f4ea6cb5d95.png"
                     alt=""
-                    class="signup-image"
+                    className="signup-image"
                 />
                 <div className="signup-container">
                     <h1 class="signup-heading">Đăng nhập</h1>

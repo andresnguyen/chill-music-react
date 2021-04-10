@@ -5,7 +5,6 @@ import './AlbumList.scss'
 AlbumList.propTypes = {}
 
 function AlbumList(props) {
-    console.log(props.dataTest)
     const datalist = props?.dataTest
     return (
         <div className="albumlist-wrapper">
@@ -16,10 +15,9 @@ function AlbumList(props) {
             <div className="albumlist-row">
                 {datalist.map((value, index) => {
                     return (
-                        <div className="albumlist-column">
+                        <div className="albumlist-column" key={index}>
                             <div className="albumlist-card">
                                 <AlbumItem
-                                    key={index}
                                     album={{
                                         img: value.thumbnailM,
                                         title: value.name,

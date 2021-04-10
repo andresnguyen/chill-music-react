@@ -109,7 +109,6 @@ function PlayMusic() {
     }
 
     const handleVolumeClick = () => {
-        console.log('click')
         setIsMute(!isMute)
 
         if (!isMute) {
@@ -191,16 +190,20 @@ function PlayMusic() {
 
             <footer className="footer">
                 <div className="footer-info">
-                    <Link>
+                    <Link to="">
                         <img src={songs[currentIndex]?.image} alt="music" className="info__img" />
                     </Link>
 
                     <div className="info__name">
-                        <Link>{songs[currentIndex]?.title}</Link>
+                        <Link to="">{songs[currentIndex]?.title}</Link>
 
                         <div className="list-artist">
-                            {songs[currentIndex]?.artists.split('-').map((artist) => {
-                                return <Link to="">{artist.trim()}</Link>
+                            {songs[currentIndex]?.artists.split('-').map((artist, index) => {
+                                return (
+                                    <Link to="" key={index}>
+                                        {artist.trim()}
+                                    </Link>
+                                )
                             })}
                         </div>
                     </div>

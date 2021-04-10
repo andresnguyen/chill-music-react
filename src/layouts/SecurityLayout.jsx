@@ -6,11 +6,11 @@ import './SecurityLayout.scss'
 import Sidebar from '../common/Sidebar'
 function SecurityLayout({ children, title }) {
     return (
-        <div>
+        <>
             <div className="top-layout">
                 <Sidebar />
                 <div className="right-content">
-                    <div className="right-content-backgroud">
+                    <div className="right-content-background">
                         <Header />
                         <PlayerQueue />
                         <Helmet>
@@ -23,7 +23,7 @@ function SecurityLayout({ children, title }) {
             <div className="bottom-layout">
                 <PlayMusic />
             </div>
-        </div>
+        </>
     )
 }
 

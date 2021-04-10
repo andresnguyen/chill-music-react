@@ -1,28 +1,9 @@
 import React from 'react'
 import './SignInForm.scss'
-import { yupResolver } from '@hookform/resolvers/yup'
-import { useForm } from 'react-hook-form'
-import * as yup from 'yup'
-import InputField from '../../../../common/form-controls/InputField'
-import PasswordField from '../../../../common/form-controls/PasswordField'
-import { Link } from 'react-router-dom'
 
 SignInForm.propTypes = {}
 
 function SignInForm(props) {
-    const schema = yup.object().shape({
-        email: yup.string().required('Please enter your email.').email('Please enter a valid email address.'),
-        password: yup.string().required('Please enter your password'),
-    })
-
-    const form = useForm({
-        defaultValues: {
-            email: '',
-            password: '',
-        },
-        resolver: yupResolver(schema),
-    })
-
     const handleSubmit = async (values) => {
         const { onSubmit } = props
         if (onSubmit) {
@@ -30,31 +11,40 @@ function SignInForm(props) {
         }
     }
 
-    // const { isSubmitting } = form.formState
-
     return (
-        <form className="signup-form" onSubmit={form.handleSubmit(handleSubmit)}>
-            <InputField name="email" label="Email" form={form} />
-            <PasswordField name="password" label="Password" form={form} />
-
-            <div class="form-group signup-term">
-                Quên mật khẩu. Nhấn tại{' '}
-                <Link href="#" class="signup-term-link">
-                    đây.
-                </Link>
+        <form className="signup-form" autocomplete="off" onSubmit={handleSubmit}>
+            <div className="form-group input-focus-effect">
+                <input type="email" id="email" className="form-input" required name="email" />
+                <label for="email" className="form-label">
+                    Email
+                </label>
             </div>
-            <button type="submit" class="btn btn--gradient form-group">
+
+            <div className="form-group input-focus-effect">
+                <input type="password" id="password" className="form-input" required name="password" />
+                <label for="password" className="form-label">
+                    Password
+                </label>
+            </div>
+
+            <div className="signup-term">
+                Quên mật khẩu. Nhấn tại{' '}
+                <a href="/auth/login" alt="something" className="signup-term-link">
+                    đây.
+                </a>
+            </div>
+            <button type="submit" className="btn btn--gradient">
                 Đăng nhập
             </button>
 
-            <button class="btn btn--facebook btn--social">
-                <i class="fab fa-facebook-f"></i>
+            <button className="btn btn--facebook btn--social">
+                <i className="fab fa-facebook-f"></i>
 
                 <span>Đăng nhập với Facebook</span>
             </button>
 
-            <button class="btn btn--google btn--social">
-                <i class="fab fa-google"></i>
+            <button className="btn btn--google btn--social">
+                <i className="fab fa-google"></i>
                 <span>Đăng nhập với Google</span>
             </button>
         </form>

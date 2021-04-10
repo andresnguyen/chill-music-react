@@ -1,5 +1,5 @@
 #blurry-filter {
-    margin-left: 200px;
+    margin-left: var(--sidebar-width);
     width: 100%;
     height: 6rem;
     mask: linear-gradient(black 7rem, transparent);
@@ -20,6 +20,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1;
+    left: 0;
 }
 header > div {
     width: calc(100% - 3rem);

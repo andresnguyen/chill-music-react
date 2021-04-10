@@ -2,29 +2,75 @@
     height: calc(100vh - var(--footer-height));
     width: 100%;
     position: fixed;
-    // z-index: 1;
-    // background-color: rebeccapurple;
     overflow-x: hidden;
 }
+
 /* Style the content */
 .right-content {
-    margin-left: 200px;
-    // padding-left: 20px;
+    margin-left: var(--sidebar-width);
     height: calc(100vh - var(--footer-height));
     overflow-x: hidden;
-    // background-color: rgb(223, 183, 74);
 }
+
 .bottom-layout {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     height: var(--footer-height);
-    // background-color: gold;
 }
-.right-content-backgroud {
+
+.right-content-background {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     cursor: default;
+}
+
+.logo__img1 {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    .top-layout {
+        .sidenav {
+            width: 70px;
+        }
+        .container-sidenav {
+            padding: 0;
+        }
+
+        .sidenav-item span {
+            display: none;
+        }
+
+        .sidenav-item {
+            font-size: 2.4rem;
+            text-align: center;
+            padding-left: 20px;
+            height: 70px;
+            padding: 0;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .logo__img {
+            display: none;
+        }
+
+        .logo__img1 {
+            display: inline-block;
+            width: 70%;
+        }
+
+        .logo {
+            padding: 0;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .right-content {
+            margin-left: 70px;
+        }
+    }
 }

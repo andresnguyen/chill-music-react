@@ -21,10 +21,10 @@ function AlbumItem({ album }) {
                         <i className="fal fa-heart"></i>
                     </button>
                     <button className="button-play">
-                        <i class="fas fa-play"></i>
+                        <i className="fas fa-play"></i>
                     </button>
                     <button className="button-nm">
-                        <i class="far fa-ellipsis-h"></i>
+                        <i className="far fa-ellipsis-h"></i>
                     </button>
                 </div>
 
