@@ -23,7 +23,7 @@ function AlbumList(props) {
                                     album={{
                                         img: value.thumbnailM,
                                         title: value.name,
-                                        desc: value.genre + ' -- ' + value.realeaseDate,
+                                        desc: value.genre,
                                     }}
                                 />
                             </div>
