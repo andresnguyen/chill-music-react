@@ -25,14 +25,14 @@ function PlayerQueue() {
                     if (index === arr.length - 1) {
                         current = true
                     }
-                    return <SongItem index={index} song={song} current={current} />
+                    return <SongItem index={index} key={index} song={song} current={current} />
                 })}
             </div>
 
             <div className="back-songs">
                 <h4 className="back-songs__title">Tiếp theo...</h4>
                 {backSongs.map((song, index) => (
-                    <SongItem index={index} song={song} />
+                    <SongItem key={index} index={100 + index} song={song} />
                 ))}
             </div>
         </div>

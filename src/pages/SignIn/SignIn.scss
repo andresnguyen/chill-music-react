@@ -129,7 +129,7 @@
     outline: none;
 }
 .input-focus-effect input:focus {
-    border-color: var(--primary);
+    border-color: #08aeea;
 }
 .input-focus-effect input:focus + label {
     transform: translateY(0);
@@ -156,4 +156,8 @@
 
 .btn--social i {
     font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 25px;
 }

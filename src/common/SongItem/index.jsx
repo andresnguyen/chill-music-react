@@ -27,8 +27,8 @@ function SongItem({ song, current }) {
                 {current && isPlaying && (
                     <i className="action-play song-item__play" style={{ backgroundImage: urlPlay }}></i>
                 )}
-                {current && !isPlaying && <i class="fas fa-play song-item__play song-item__play--active"></i>}
-                {!current && <i class="fas fa-play song-item__play"></i>}
+                {current && !isPlaying && <i className="fas fa-play song-item__play song-item__play--active"></i>}
+                {!current && <i className="fas fa-play song-item__play"></i>}
             </Link>
 
             <div className="song-item__info">
@@ -43,10 +43,10 @@ function SongItem({ song, current }) {
             <div className="song-item__others">
                 <button>
                     {/* <i class="fas fa-heart"></i> */}
-                    <i class="fal fa-heart"></i>
+                    <i className="fal fa-heart"></i>
                 </button>
                 <button>
-                    <i class="far fa-ellipsis-h"></i>
+                    <i className="far fa-ellipsis-h"></i>
                 </button>
             </div>
         </div>
