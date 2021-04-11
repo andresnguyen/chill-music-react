@@ -1,8 +1,6 @@
 import './PlayListCarousel.scss'
 function PlayListCarousel() {
-    const testclick = () => {
-        console.log('test click')
-    }
+    const testclick = () => {}
     return (
         <article id="playlist-carousel">
             <div className="playlist-carousel-container">
