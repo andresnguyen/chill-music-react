@@ -32,7 +32,7 @@ function PlayerQueue() {
             <div className="back-songs">
                 <h4 className="back-songs__title">Tiếp theo...</h4>
                 {backSongs.map((song, index) => (
-                    <SongItem key={index} index={100 + index} song={song} />
+                    <SongItem key={frontSongs.length + index} index={index} song={song} />
                 ))}
             </div>
         </div>

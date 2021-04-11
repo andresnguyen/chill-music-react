@@ -71,11 +71,13 @@ function PlayMusic() {
             setSongs(resp.data)
         }
         getSongs()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     // check every next song
     useEffect(() => {
         HandlePlayMode()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentIndex])
 
     // check every volume change

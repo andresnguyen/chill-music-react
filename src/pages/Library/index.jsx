@@ -1,9 +1,14 @@
 import React from 'react'
+import SearchItem from '../../common/SearchItem'
 
 Library.propTypes = {}
 
 function Library() {
-    return <div>haha</div>
+    return (
+        <div>
+            <SearchItem />
+        </div>
+    )
 }
 
 export default Library
