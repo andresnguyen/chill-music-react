@@ -47,7 +47,7 @@ function App() {
 
     return (
         <Router>
-            <div className="App">{showContent()}</div>
+            <div className="app">{showContent()}</div>
         </Router>
     )
 }
