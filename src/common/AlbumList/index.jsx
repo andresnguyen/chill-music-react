@@ -5,6 +5,7 @@ import './AlbumList.scss'
 AlbumList.propTypes = {}
 
 function AlbumList(props) {
+    console.log(props.dataTest)
     const datalist = props?.dataTest
     return (
         <div className="albumlist-wrapper">
@@ -21,7 +22,7 @@ function AlbumList(props) {
                                     album={{
                                         img: value.thumbnailM,
                                         title: value.name,
-                                        desc: value.genre + ' -- ' + value.realeaseDate,
+                                        desc: value.genre,
                                     }}
                                 />
                             </div>

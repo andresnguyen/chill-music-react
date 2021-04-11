@@ -1,149 +1,82 @@
 import React from 'react'
-// import './Search.scss'
+import AlbumList from '../../common/AlbumList'
+import './Search.scss'
+
+const dataTest = [
+    {
+        name: 'Nghe Thôi... Đã Thấy HIT!',
+        thumbnail:
+            'https://photo-resize-zmp3.zadn.vn/w165_r1x1_jpeg/cover/9/1/d/b/91dbde948386b4dda1001a575683448d.jpg',
+        thumbnailM:
+            'https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/9/1/d/b/91dbde948386b4dda1001a575683448d.jpg',
+        realeaseDate: '2020/01/05',
+        listSongs: [],
+        genre: 'Nhac tre',
+    },
+    {
+        name: 'Các Ca Khúc Pop Ballad Việt Nổi Bật',
+        thumbnail:
+            'https://photo-resize-zmp3.zadn.vn/w165_r1x1_jpeg/cover/5/f/3/c/5f3c6acd427dd1a880b8d9d2b9865bea.jpg',
+        thumbnailM:
+            'https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/5/f/3/c/5f3c6acd427dd1a880b8d9d2b9865bea.jpg',
+        realeaseDate: '2020/01/05',
+        listSongs: [],
+        genre: 'Nhac tre',
+    },
+    {
+        name: 'V-Pop: Những Bản Hits Quốc Dân',
+        thumbnail:
+            'https://photo-resize-zmp3.zadn.vn/w165_r1x1_jpeg/cover/7/6/d/1/76d17b6d6b750f85d8a35de982d80708.jpg',
+        thumbnailM:
+            'https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/7/6/d/1/76d17b6d6b750f85d8a35de982d80708.jpg',
+        realeaseDate: '2020/01/05',
+        listSongs: [],
+        genre: 'Nhac tre',
+    },
+    {
+        name: 'Đỉnh Cao ZING MP3',
+        thumbnail:
+            'https://photo-resize-zmp3.zadn.vn/w165_r1x1_jpeg/cover/1/7/2/b/172b1a00ca9bced80b679c96a228e4b4.jpg',
+        thumbnailM:
+            'https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/1/7/2/b/172b1a00ca9bced80b679c96a228e4b4.jpg',
+        realeaseDate: '2020/01/05',
+        listSongs: [],
+        genre: 'Nhac tre',
+    },
+    {
+        name: 'Thay Lời Muốn Nói: Hẹn Hò',
+        thumbnail:
+            'https://photo-resize-zmp3.zadn.vn/w165_r1x1_jpeg/cover/0/c/f/6/0cf61f53713fddfc912dc533fa9c4659.jpg',
+        thumbnailM:
+            'https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/0/c/f/6/0cf61f53713fddfc912dc533fa9c4659.jpg',
+        realeaseDate: '2020/01/05',
+        listSongs: [],
+        genre: 'Nhac tre',
+    },
+]
 Search.propTypes = {}
 
 function Search() {
     return (
         <div>
-            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-            has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-            type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-            leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-            software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established
-            fact that a reader will be distracted by the readable content of a page when looking at its layout. The
-            point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
-            'Content here, content here', making it look like readable English. Many desktop publishing packages and web
-            page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover
-            many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident,
-            sometimes on purpose (injected humour and the like). Where does it come from? Contrary to popular belief,
-            Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-            looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through
-            the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
-            sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
-            written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The
-            first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. What isWhat
-            is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-            into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-            software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established
-            fact that a reader will be distracted by the readable content of a page when looking at its layout. The
-            point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
-            'Content here, content here', making it look like readable English. Many desktop publishing packages and web
-            page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover
-            many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident,
-            sometimes on purpose (injected humour and the like). Where does it come from? Contrary to popular belief,
-            Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-            looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through
-            the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
-            sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
-            written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The
-            first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.What is
-            Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a
-            reader will be distracted by the readable content of a page when looking at its layout. The point of using
-            Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
-            content here', making it look like readable English. Many desktop publishing packages and web page editors
-            now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites
-            still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on
-            purpose (injected humour and the like). Where does it come from? Contrary to popular belief, Lorem Ipsum is
-            not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over
-            2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one
-            of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
-            word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-            1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This
-            book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem
-            Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.What is Lorem Ipsum? Lorem Ipsum
-            is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-            type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-            including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be
-            distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
-            that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
-            making it look like readable English. Many desktop publishing packages and web page editors now use Lorem
-            Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
-            infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected
-            humour and the like). Where does it come from? Contrary to popular belief, Lorem Ipsum is not simply random
-            text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-            Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
-            classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
-            of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is
-            a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
-            "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.What is Lorem Ipsum? Lorem Ipsum is
-            simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-            type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-            including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be
-            distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
-            that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
-            making it look like readable English. Many desktop publishing packages and web page editors now use Lorem
-            Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
-            infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected
-            humour and the like). Where does it come from? Contrary to popular belief, Lorem Ipsum is not simply random
-            text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-            Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
-            classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
-            of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is
-            a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
-            "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.What is Lorem Ipsum? Lorem Ipsum is
-            simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-            type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-            including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be
-            distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
-            that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
-            making it look like readable English. Many desktop publishing packages and web page editors now use Lorem
-            Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
-            infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected
-            humour and the like). Where does it come from? Contrary to popular belief, Lorem Ipsum is not simply random
-            text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-            Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
-            classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
-            of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is
-            a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
-            "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. Lorem Ipsum? Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-            book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-            essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-            Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-            of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the
-            readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-            more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it
-            look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
-            their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-            Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour
-            and the like). Where does it come from? Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard
-            McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin
-            words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
-            literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de
-            Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a
-            treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
-            ipsum dolor sit amet..", comes from a line in section 1.10.32.
+            <section>
+                {/* <div className="search-content-title">Kết quả hàng đầu</div> */}
+                {/* <div className="search-content-top-wrapper">haha</div> */}
+                <AlbumList listTitle="Các tìm kiếm gần đây" dataTest={dataTest}></AlbumList>
+            </section>
+            <section>
+                <div className="search-content-title">Bài hát</div>
+                <div className="search-content-top-wrapper">haha</div>
+            </section>
+            <section>
+                <div className="search-content-title">Album</div>
+                <div className="search-content-top-wrapper">haha</div>
+            </section>
+            <section>
+                <div className="search-content-title">Playlist</div>
+                <div className="search-content-top-wrapper">haha</div>
+            </section>
         </div>
-        // <div className="search-wrapper">
-        //     <div className="search__container">
-        //         <input className="search__input" type="text" placeholder="Search" />
-        //     </div>
-        // </div>
     )
 }
 

@@ -178,10 +178,10 @@ function Home() {
     return (
         <div className="main">
             <PlayListCarousel />
-            <AlbumList listTitle="Chào buổi sáng" dataTest={dataTest}></AlbumList>
-            <AlbumList listTitle="Đã phát gần đây" dataTest={dataTest2}></AlbumList>
-            <AlbumList listTitle="Ngày năng động" dataTest={dataTest3}></AlbumList>
-            <AlbumList listTitle="Lựa chọn của Chill Music" dataTest={dataTest4}></AlbumList>
+            <AlbumList listTitle="Chào buổi sáng" dataTest={dataTest} key="1"></AlbumList>
+            <AlbumList listTitle="Đã phát gần đây" dataTest={dataTest2} key="2"></AlbumList>
+            <AlbumList listTitle="Ngày năng động" dataTest={dataTest3} key="3"></AlbumList>
+            <AlbumList listTitle="Lựa chọn của Chill Music" dataTest={dataTest4} key="4"></AlbumList>
         </div>
     )
 }

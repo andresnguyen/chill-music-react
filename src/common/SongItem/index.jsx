@@ -35,8 +35,12 @@ function SongItem({ song, current }) {
                 <h3 className="song-item__name">{song.title}</h3>
 
                 <div className="artist-list">
-                    {song.artists.split('-').map((artist) => {
-                        return <Link to="">{artist.trim()}</Link>
+                    {song.artists.split('-').map((artist, index) => {
+                        return (
+                            <Link to="" key={index}>
+                                {artist.trim()}
+                            </Link>
+                        )
                     })}
                 </div>
             </div>
