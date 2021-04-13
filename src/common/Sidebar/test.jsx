@@ -1,7 +1,7 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
-import './SearchItem.scss'
-SearchItem.propTypes = {}
+
+HAHA.propTypes = {}
+
 const dataTest = [
     {
         encodeId: 'IWZ9Z09E',
@@ -1214,26 +1214,9 @@ const dataTest = [
         ],
     },
 ]
-function SearchItem() {
-    return (
-        <div>
-            <div className="search-item-cards-list">
-                {dataTest.map((value, index) => {
-                    return (
-                        <div className="search-item-card 1" key={index}>
-                            <div className="search-item-card_image">
-                                <img src={value.thumbnail} />
-                                <div className="search-item-card-opacity"></div>
-                            </div>
-                            <div className="search-item-card_title title-white">
-                                <p>{value.title}</p>
-                            </div>
-                        </div>
-                    )
-                })}
-            </div>
-        </div>
-    )
+
+function HAHA() {
+    return <div></div>
 }
 
-export default SearchItem
+export default HAHA
