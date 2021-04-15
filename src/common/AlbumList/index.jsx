@@ -5,7 +5,6 @@ import './AlbumList.scss'
 AlbumList.propTypes = {}
 
 function AlbumList(props) {
-    console.log(props.dataTest)
     const datalist = props?.dataTest
     return (
         <div className="albumlist-wrapper">
