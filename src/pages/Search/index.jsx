@@ -1,6 +1,7 @@
 import React from 'react'
 import AlbumList from '../../common/AlbumList'
 import SearchItem from '../../common/SearchItem'
+import TopHistorySearch from '../../common/TopHistorySearch'
 import './Search.scss'
 
 const dataTest = [
@@ -67,7 +68,8 @@ function Search() {
             </section>
             <section>
                 <div className="search-content-title">Thể loại nghe nhiều nhất</div>
-                <div className="search-content-top-wrapper">haha</div>
+                {/* <div className="search-content-top-wrapper">haha</div> */}
+                <TopHistorySearch />
             </section>
             <section>
                 <div className="search-content-title">Duyệt tìm tất cả</div>

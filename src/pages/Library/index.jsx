@@ -1,12 +1,12 @@
 import React from 'react'
-import SearchItem from '../../common/SearchItem'
+import TopHistorySearch from '../../common/TopHistorySearch'
 
 Library.propTypes = {}
 
 function Library() {
     return (
         <div>
-            <SearchItem />
+            <TopHistorySearch />
         </div>
     )
 }
