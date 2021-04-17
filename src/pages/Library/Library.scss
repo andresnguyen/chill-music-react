@@ -1,0 +1,115 @@
+.library-wrapper {
+    padding: 20px 0;
+}
+
+// header {
+//     width: 90%;
+//     max-width: 1240px;
+//     margin: 0 auto;
+// }
+.library-wrapper-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.04em;
+    text-transform: none;
+}
+.library-band {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+@media (min-width: 30em) {
+    .library-band {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 60em) {
+    .library-band {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card {
+    background: white;
+    text-decoration: none;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+    top: 0;
+    transition: all 0.1s ease-in;
+}
+.card:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.library-act {
+    position: absolute;
+    z-index: 6;
+    // top: 0;
+    bottom: 0;
+    // left: 0;
+    right: 0;
+    // margin-left: auto;
+    // margin-right: auto;
+    // margin-bottom: auto;
+    // margin-top: auto;
+    width: 60px;
+    height: 60px;
+    // background-color: rgb(29, 11, 11);
+}
+.card article {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card h1 {
+    font-size: 20px;
+    line-height: 1;
+    margin: 0;
+    color: #333;
+}
+.card p {
+    margin-top: 1em;
+    flex: 1;
+    line-height: 1.4;
+    color: #999;
+    // font-weight: 400;
+}
+.card span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+    // text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 1em 0 0 0;
+}
+.card .thumb {
+    padding-bottom: 40%;
+    background-size: cover;
+    background-position: center center;
+    margin: 3% 3% 0% 3%;
+}
+
+@media (min-width: 60em) {
+    .item-1 {
+        grid-column: 1 / span 2;
+    }
+    .item-1 h1 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,55 @@
+.button-play-container {
+    width: 100%;
+    text-align: center;
+    // margin-top: 25vh;
+}
+
+.button-play-circle {
+    stroke: #1db954;
+    stroke-dasharray: 650;
+    stroke-dashoffset: 650;
+    -webkit-transition: all 0.5s ease-in-out;
+    opacity: 0.3;
+}
+
+.button-play-playBut {
+    /*  border: 1px solid red;*/
+    display: inline-block;
+    -webkit-transition: all 0.5s ease;
+}
+.button-play-playBut .button-play-triangle {
+    -webkit-transition: all 0.7s ease-in-out;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    stroke: #1db954;
+    transform: translateY(0);
+    fill: #8be6ab;
+}
+.button-play-playBut:hover .button-play-triangle {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    stroke: #1db954;
+    animation: nudge 0.7s ease-in-out;
+    fill: #1db954;
+}
+@keyframes nudge {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    70% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.button-play-playBut:hover .button-play-circle {
+    stroke-dashoffset: 0;
+    opacity: 1;
+}
