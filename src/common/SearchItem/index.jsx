@@ -1217,17 +1217,17 @@ const dataTest = [
 function SearchItem() {
     return (
         <div>
-            <div className="search-item-cards-list">
+            <div className="row">
                 {dataTest.map((value, index) => {
                     return (
-                        <div className="search-item-card 1" key={index}>
+                        <div className="search-item-card col c-3" key={index}>
                             <div className="search-item-card_image">
-                                <img src={value.thumbnail} />
+                                <div className="img-wrapper-search">
+                                    <img src={value.thumbnail} />
+                                </div>
                                 <div className="search-item-card-opacity"></div>
                             </div>
-                            <div className="search-item-card_title title-white">
-                                <p>{value.title}</p>
-                            </div>
+                            <h3>{value.title}</h3>
                         </div>
                     )
                 })}

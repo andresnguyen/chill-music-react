@@ -31,6 +31,8 @@
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    border-radius: 7px;
+    overflow: hidden;
 }
 .top-history-search-card:last-child {
     margin-bottom: 0;
@@ -113,6 +115,7 @@
     -o-object-fit: cover;
     object-fit: cover;
     transform: rotate(30deg);
+    transition: all 1s;
 }
 .top-history-search-card-label {
     position: absolute;
@@ -135,8 +138,19 @@
     line-height: 2;
     font-size: 1.1vw;
     font-weight: 800;
+    transition: all 0.7s;
 }
-.top-history-search-card:hover {
+.top-history-search-card:hover img {
     transform: scale(1.05);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+
+    top: 5%;
+    right: 10%;
+    width: 80%;
+    height: 80%;
+}
+
+.top-history-search-card:hover .top-history-search-card-title {
+    font-size: 25px;
+    text-align: left;
 }

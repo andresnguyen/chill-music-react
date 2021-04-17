@@ -1,26 +1,10 @@
-#blurry-filter {
-    margin-left: var(--sidebar-width);
-    width: 100%;
-    height: 6rem;
-    mask: linear-gradient(black 7rem, transparent);
-    -webkit-mask: linear-gradient(black 7rem, transparent);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    pointer-events: none;
-    touch-action: none;
-}
-
-header {
-    width: 100%;
-    height: 6rem;
+.header-container {
+    height: 60px;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 100;
     left: 0;
+    background-color: #1d1d1d;
 }
 header > div {
     width: calc(100% - 3rem);
@@ -31,8 +15,9 @@ header > div {
 }
 
 #search-header {
-    width: 100%;
+    flex-grow: 1;
 }
+
 #search-header .name {
     font-size: 2em;
     font-weight: bold;
@@ -41,11 +26,34 @@ header > div {
 }
 
 #reference {
-    display: flex;
-}
-#reference > a {
-    color: #444;
-}
-#reference > a + a {
-    margin-left: 1rem;
+    margin-left: auto;
+
+    .btn-login,
+    .btn-signup {
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1.1px;
+        line-height: 18px;
+        padding: 8px 28px;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 500px;
+        background-color: transparent;
+
+        transition: all 0.1s;
+    }
+
+    .btn-login:hover,
+    .btn-signup:hover {
+        transform: scale(1.04);
+    }
+
+    .btn-login {
+        color: #000;
+        background-color: #fff;
+    }
 }

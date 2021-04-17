@@ -60,7 +60,7 @@ Search.propTypes = {}
 
 function Search() {
     return (
-        <div>
+        <div className="search-container">
             <section>
                 {/* <div className="search-content-title">Kết quả hàng đầu</div> */}
                 {/* <div className="search-content-top-wrapper">haha</div> */}
@@ -72,7 +72,7 @@ function Search() {
                 <TopHistorySearch />
             </section>
             <section>
-                <div className="search-content-title">Duyệt tìm tất cả</div>
+                <div className="search-content-title grid">Duyệt tìm tất cả</div>
                 {/* <div className="search-content-top-wrapper">haha</div> */}
                 <SearchItem />
             </section>

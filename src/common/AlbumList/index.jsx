@@ -12,11 +12,11 @@ function AlbumList(props) {
                 <div className="albumlist-title">{props.listTitle}</div>
                 <div className="albumlist-seeall">xem tất cả</div>
             </div>
-            <div className="albumlist-row">
-                {datalist.map((value, index) => {
-                    return (
-                        <div className="albumlist-column" key={index}>
-                            <div className="albumlist-card">
+            <div className="grid">
+                <div className="row">
+                    {datalist.map((value, index) => {
+                        return (
+                            <div className="col c-2 m-2" key={index}>
                                 <AlbumItem
                                     album={{
                                         img: value.thumbnailM,
@@ -25,9 +25,9 @@ function AlbumList(props) {
                                     }}
                                 />
                             </div>
-                        </div>
-                    )
-                })}
+                        )
+                    })}
+                </div>
             </div>
         </div>
     )
