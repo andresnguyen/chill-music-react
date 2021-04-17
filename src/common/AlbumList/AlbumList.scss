@@ -8,7 +8,7 @@
 .albumlist-header {
     display: flex;
     justify-content: space-between;
-    padding: 0px 10px 0px;
+    margin-bottom: 20px;
 }
 .albumlist-title {
     text-overflow: ellipsis;
@@ -25,12 +25,15 @@
 }
 .albumlist-seeall {
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 28px;
     text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.08em;
     cursor: pointer;
+
+    text-transform: uppercase;
+    color: #4d4d4d;
 }
 .albumlist-seeall:hover {
     text-decoration: underline;
