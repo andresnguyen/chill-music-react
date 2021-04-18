@@ -7,6 +7,8 @@ const Home = lazy(() => import('../pages/Home'))
 const Search = lazy(() => import('../pages/Search'))
 const Library = lazy(() => import('../pages/Library'))
 const History = lazy(() => import('../pages/History'))
+const SeeAll = lazy(() => import('../pages/SeeAll'))
+const UserPlaylist = lazy(() => import('../pages/UserPlaylist'))
 
 const route = [
     {
@@ -32,6 +34,22 @@ const route = [
         layout: SecurityLayout,
         title: 'Thư viện',
         main: (props) => <Library router={props} />,
+    },
+    {
+        path: '/collection',
+        exact: true,
+        auth: false,
+        layout: SecurityLayout,
+        title: 'Xem tất cả',
+        main: (props) => <SeeAll router={props} />,
+    },
+    {
+        path: '/playlist',
+        exact: true,
+        auth: false,
+        layout: SecurityLayout,
+        title: 'Danh sách nhạc',
+        main: (props) => <UserPlaylist router={props} />,
     },
     {
         path: '/history',

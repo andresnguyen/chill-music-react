@@ -1,7 +1,7 @@
 import React from 'react'
 import AlbumItem from '../AlbumItem'
 import './AlbumList.scss'
-
+import { Link } from 'react-router-dom'
 AlbumList.propTypes = {}
 
 function AlbumList(props) {
@@ -10,7 +10,9 @@ function AlbumList(props) {
         <div className="albumlist-wrapper">
             <div className="albumlist-header">
                 <div className="albumlist-title">{props.listTitle}</div>
-                <div className="albumlist-seeall">xem tất cả</div>
+                <Link to="/collection" style={{ textDecoration: 'none' }}>
+                    <div className="albumlist-seeall">xem tất cả</div>
+                </Link>
             </div>
             <div className="grid">
                 <div className="row">
