@@ -19,9 +19,9 @@ function SongItemList() {
                     src="https://upload.wikimedia.org/wikipedia/commons/3/38/%C4%90en_V%C3%A2u.jpg"
                     alt="sharkdev"
                 />
-                <div>Tết này con không về</div>
+                <div className="songitemlist-name">Tết này con không về</div>
             </div>
-            <div className="songitemlist-name">3,354,101</div>
+            <div className="songitemlist-countlisten">3,354,101</div>
             <div className="songitemlist-time">04:21</div>
         </div>
     )
