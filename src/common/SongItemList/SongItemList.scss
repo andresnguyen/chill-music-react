@@ -1,0 +1,35 @@
+.songitemlist-wrapper {
+    width: 100%;
+    height: 50px;
+    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: row;
+    object-fit: contain;
+    align-items: center;
+}
+.songitemlist-num {
+    flex: 0.5;
+    // justify-content: center;
+    text-align: center;
+}
+.songitemlist-info-group {
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    flex: 9;
+}
+.songitemlist-img {
+    max-width: 100%;
+    max-height: 100%;
+    // margin: auto;
+    display: block;
+}
+.songitemlist-name {
+    flex: 3;
+}
+.songitemlist-time {
+    flex: 1;
+}

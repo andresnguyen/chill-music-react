@@ -5,19 +5,17 @@ body {
 .hero {
     display: inline-block;
     width: 100%;
-    height: 300px;
-    position: relative;
-}
-.user-playlist-info-img {
-    background-size: cover;
-    // background-position: center center;
+    height: 25vh;
+    //     position: relative;
+    //     display: flex;
+    //     align-items: flex-end;
 }
 .diagonal-hero-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 300px;
+    height: 25vh;
     background-size: 100%;
 
     // background: #2b5876; /* fallback for old browsers */
@@ -29,7 +27,7 @@ body {
     // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     z-index: -1;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 // creates randomized star sizes
@@ -120,4 +118,43 @@ $stars-big: stars(100);
     to {
         transform: translateY(0px);
     }
+}
+
+.artist-playlist-button-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12%;
+    height: 30%;
+    // background-color: lawngreen;
+    position: relative;
+    // bottom: 0;
+    // left: 0;
+}
+.artist-playlist-info {
+    color: white;
+    display: flex;
+    // justify-content: center;
+    // align-items: flex-end;
+    flex-direction: column;
+}
+.artist-playlist-confirm {
+    font-size: 1vw;
+    font-weight: 400;
+    // letter-spacing: normal;
+    // line-height: 16px;
+    // text-transform: none;
+}
+.artist-playlist-name {
+    // padding: 0.2em 0px;
+    // font-size: 10vw;
+    font-weight: 900;
+    font-size: 60px;
+    // line-height: 10%;
+    // visibility: visible;
+}
+.artist-playlist-numlisten {
+    // font-size: 1vw;
+    // line-height: 2;
+    // margin-top: 4px;
 }
