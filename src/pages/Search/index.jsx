@@ -1,7 +1,7 @@
 import React from 'react'
 import AlbumList from '../../common/AlbumList'
 import SearchItem from '../../common/SearchItem'
-import TopHistorySearch from '../../common/TopHistorySearch'
+// import TopHistorySearch from '../../common/TopHistorySearch'
 import './Search.scss'
 
 const dataTest = [
@@ -66,11 +66,11 @@ function Search() {
                 {/* <div className="search-content-top-wrapper">haha</div> */}
                 <AlbumList listTitle="Các tìm kiếm gần đây" dataTest={dataTest}></AlbumList>
             </section>
-            <section>
+            {/* <section>
                 <div className="search-content-title">Thể loại nghe nhiều nhất</div>
-                {/* <div className="search-content-top-wrapper">haha</div> */}
+                <div className="search-content-top-wrapper">haha</div> 
                 <TopHistorySearch />
-            </section>
+            </section> */}
             <section>
                 <div className="search-content-title grid">Duyệt tìm tất cả</div>
                 {/* <div className="search-content-top-wrapper">haha</div> */}
