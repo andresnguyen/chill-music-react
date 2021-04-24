@@ -3,6 +3,7 @@ import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-d
 import routes from './app/route'
 import { Suspense } from 'react'
 import LoaderPage from './common/Loader'
+import 'animate.css/animate.min.css'
 
 const PrivateRoute = () => <Redirect to="/sigin" />
 
