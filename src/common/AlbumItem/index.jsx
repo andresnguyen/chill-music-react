@@ -14,21 +14,21 @@ function AlbumItem({ album }) {
     return (
         <div className="album-item">
             <div className="img-wrapper" style={{ backgroundImage: `url(${img})` }}>
-                <div className="album-item__tool">
+                <div className="album-item__tool animate__fadeInUp">
                     {/* <i className="fas fa-heart"></i>  */}
                     {/* <i class="fas fa-play icon-play"></i> */}
-                    <button className="button-nm">
+                    {/* <button className="button-nm">
                         <i className="fal fa-heart"></i>
-                    </button>
+                    </button> */}
                     <button className="button-play">
                         <i className="fas fa-play"></i>
                     </button>
-                    <button className="button-nm">
+                    {/* <button className="button-nm">
                         <i className="far fa-ellipsis-h"></i>
-                    </button>
+                    </button> */}
                 </div>
 
-                <div className="opactity"></div>
+                <div className="opactity animate__fadeInUp"></div>
             </div>
 
             <h3 className="album-item__title">{title}</h3>
