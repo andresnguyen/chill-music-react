@@ -1,10 +1,10 @@
 import React from 'react'
 import './SongItemList.scss'
 
-function SongItemList() {
+function SongItemList(props) {
     return (
         <div className="songitemlist-wrapper">
-            <div className="songitemlist-num">1</div>
+            <div className="songitemlist-num">{props.no + 1}</div>
             <div className="songitemlist-info-group">
                 {/* <div
                     className="songitemlist-img"
@@ -14,12 +14,8 @@ function SongItemList() {
                 >
                     
                 </div> */}
-                <img
-                    className="songitemlist-img"
-                    src="https://upload.wikimedia.org/wikipedia/commons/3/38/%C4%90en_V%C3%A2u.jpg"
-                    alt="sharkdev"
-                />
-                <div className="songitemlist-name">Tết này con không về</div>
+                <img className="songitemlist-img" src={props.data.image} alt="sharkdev" />
+                <div className="songitemlist-name">{props.data.title}</div>
             </div>
             <div className="songitemlist-countlisten">3,354,101</div>
             <div className="songitemlist-time">04:21</div>

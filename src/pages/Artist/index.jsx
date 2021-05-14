@@ -2,8 +2,8 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react'
+import ArtistSongList from '../../common/ArtistSongList'
 import ButtonPlay from '../../common/ButtonPlay'
-import SongItemList from '../../common/SongItemList'
 // import PropTypes from 'prop-types';
 import './Artist.scss'
 Artist.propTypes = {}
@@ -35,7 +35,7 @@ function Artist() {
                         </svg> */}
                         <ButtonPlay />
                     </div>
-                    <SongItemList />
+                    <ArtistSongList />
                 </div>
             </div>
         </div>
