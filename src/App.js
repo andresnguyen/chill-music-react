@@ -4,6 +4,7 @@ import routes from './app/route'
 import { Suspense } from 'react'
 import LoaderPage from './common/Loader'
 import 'animate.css/animate.min.css'
+import PlayMusic from './common/PlayMusic'
 
 const PrivateRoute = () => <Redirect to="/sigin" />
 
@@ -50,6 +51,9 @@ function App() {
     return (
         <Router>
             <div className="app">{showContent()}</div>
+            <div className="bottom-layout">
+                <PlayMusic />
+            </div>
         </Router>
     )
 }

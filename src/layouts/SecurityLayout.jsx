@@ -1,6 +1,5 @@
 import Header from '../common/Header'
 import PlayerQueue from '../common/PlayerQueue'
-import PlayMusic from '../common/PlayMusic'
 import { Helmet } from 'react-helmet'
 import './SecurityLayout.scss'
 import Sidebar from '../common/Sidebar'
@@ -19,9 +18,6 @@ function SecurityLayout({ children, title }) {
                         {children}
                     </div>
                 </div>
-            </div>
-            <div className="bottom-layout">
-                <PlayMusic />
             </div>
         </>
     )

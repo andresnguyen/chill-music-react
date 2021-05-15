@@ -76,7 +76,7 @@ function PlayMusic() {
 
     // check every next song
     useEffect(() => {
-        // HandlePlayMode()
+        HandlePlayMode()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentIndex])
 
