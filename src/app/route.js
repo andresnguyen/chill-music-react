@@ -10,6 +10,7 @@ const History = lazy(() => import('../pages/History'))
 const SeeAll = lazy(() => import('../pages/SeeAll'))
 const UserPlaylist = lazy(() => import('../pages/UserPlaylist'))
 const Artist = lazy(() => import('../pages/Artist'))
+const Album = lazy(() => import('../pages/Album'))
 
 const route = [
     {
@@ -67,6 +68,14 @@ const route = [
         layout: SecurityLayout,
         title: 'Lịch sử',
         main: (props) => <History router={props} />,
+    },
+    {
+        path: '/album',
+        exact: true,
+        auth: false,
+        layout: SecurityLayout,
+        title: 'album',
+        main: (props) => <Album router={props} />,
     },
     {
         path: '/auth/login',

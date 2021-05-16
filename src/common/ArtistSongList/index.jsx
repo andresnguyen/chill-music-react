@@ -58,28 +58,31 @@ const dataTest = [
 ]
 function ArtistSongList() {
     return (
-        <div className="artist-song-list-wrapper">
-            <div className="artist-song-list-left">
-                {dataTest.map((value, index) => {
-                    return <SongItemList key={index} data={value} no={index} />
-                })}
-            </div>
-            <div className="artist-song-list-right">
-                <div className="artist-song-list-right-title">Artist pick</div>
-                <div className="artist-song-list-right-song">
-                    <img
-                        className="artist-song-list-right-img"
-                        src="https://lh3.googleusercontent.com/LBZbzy9NXoY_0vQQOkDQnVSzu27am8yxvcsxOk0CPhfnr7uraTv-9ONUje1b7zcK0bTqTbI1_pY2hVzXu4aGbSQ9"
-                        alt="sharkdev"
-                    />
-                    <div className="artist-song-list-right-info">
-                        <div>Posted By Sơn Tùng M-TP</div>
-                        <div>Muộn rồi mà sao còn</div>
-                        <div>Song</div>
+        <>
+            <div className="artist-song-list-title">Phổ biến</div>
+            <div className="artist-song-list-wrapper">
+                <div className="artist-song-list-left">
+                    {dataTest.map((value, index) => {
+                        return <SongItemList key={index} data={value} no={index} />
+                    })}
+                </div>
+                <div className="artist-song-list-right">
+                    <div className="artist-song-list-right-title">Artist pick</div>
+                    <div className="artist-song-list-right-song">
+                        <img
+                            className="artist-song-list-right-img"
+                            src="https://lh3.googleusercontent.com/LBZbzy9NXoY_0vQQOkDQnVSzu27am8yxvcsxOk0CPhfnr7uraTv-9ONUje1b7zcK0bTqTbI1_pY2hVzXu4aGbSQ9"
+                            alt="sharkdev"
+                        />
+                        <div className="artist-song-list-right-info">
+                            <div>Posted By Sơn Tùng M-TP</div>
+                            <div>Muộn rồi mà sao còn</div>
+                            <div>Song</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
