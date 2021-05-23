@@ -7,7 +7,10 @@ function Album() {
             <section className="albumpage-section">
                 <div className="albumpage-info">
                     <div className="albumpage-art">
-                        <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/5085b7a0d80811eaac7adb7ae8cc1536.png" />
+                        <img
+                            alt=""
+                            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/5085b7a0d80811eaac7adb7ae8cc1536.png"
+                        />
                         <div className="actions">
                             <div className="play">Play</div>
                             <div className="bookmark">
@@ -26,7 +29,7 @@ function Album() {
                     </div>
                     <div className="album-details">
                         <h2>
-                            <img src="https://68.media.tumblr.com/avatar_edbd71e8c8ac_128.png" />
+                            <img alt="" src="https://68.media.tumblr.com/avatar_edbd71e8c8ac_128.png" />
                             Đen Vâu
                         </h2>
                         <h1>Đưa nhau đi trốn</h1>

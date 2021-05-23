@@ -2,7 +2,7 @@
 import classnames from 'classnames'
 import React from 'react'
 import { useSelector } from 'react-redux'
-import SongItem from '../SongItem'
+import SongItem from '../SongItemQueue'
 import './PlayerQueue.scss'
 
 PlayerQueue.propTypes = {}
