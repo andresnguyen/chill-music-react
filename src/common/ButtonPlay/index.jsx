@@ -5,7 +5,7 @@ ButtonPlay.propTypes = {}
 function ButtonPlay() {
     return (
         <div className="button-play-container">
-            <a href="#" className="button-play-playBut">
+            <a href="/" className="button-play-playBut">
                 {/* Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In  */}
                 <svg
                     version="1.1"

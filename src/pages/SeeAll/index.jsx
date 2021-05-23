@@ -1,5 +1,6 @@
 import React from 'react'
 import AlbumItem from '../../common/AlbumItem'
+import './SeeAll.scss'
 const dataTest = [
     {
         media_url_mono:
@@ -1185,7 +1186,7 @@ function SeeAll() {
                                     album={{
                                         img: value.image,
                                         title: value.name,
-                                        desc: value.genre,
+                                        desc: value.name,
                                     }}
                                 />
                             </div>

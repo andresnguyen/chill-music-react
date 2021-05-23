@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import './SongItem.scss'
+import './SongItemQueue.scss'
 // import img from '../../assets/img/artist.jpg'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
@@ -22,14 +22,14 @@ function SongItem({ song, current }) {
 
     return (
         <div className="song-item">
-            <Link to="" className="song-item__img" style={{ backgroundImage: url }} onClick={handleSongClick(song.id)}>
+            <div to="" className="song-item__img" style={{ backgroundImage: url }} onClick={handleSongClick(song.id)}>
                 <div className="song-item__opacity"></div>
                 {current && isPlaying && (
                     <i className="action-play song-item__play" style={{ backgroundImage: urlPlay }}></i>
                 )}
                 {current && !isPlaying && <i className="fas fa-play song-item__play song-item__play--active"></i>}
                 {!current && <i className="fas fa-play song-item__play"></i>}
-            </Link>
+            </div>
 
             <div className="song-item__info">
                 <h3 className="song-item__name">{song.title}</h3>

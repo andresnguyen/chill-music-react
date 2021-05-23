@@ -1,0 +1,47 @@
+:root {
+    --song-height: 65px;
+}
+
+.sessionList-wrapper {
+    padding-top: 18px;
+    padding-bottom: 10px;
+}
+.sessionList-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.sessionList-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.04em;
+    text-transform: none;
+    // padding: 0 10px;
+}
+.sessionList-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.sessionList-item {
+    height: var(--song-height);
+    width: 24%;
+    box-sizing: border-box;
+    margin: 5px auto;
+}
+@media only screen and (max-width: 750px) {
+    .sessionList-item {
+        width: 32%;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .sessionList-item {
+        width: 49%;
+    }
+}
