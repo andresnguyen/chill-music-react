@@ -1,6 +1,6 @@
 import React from 'react'
-import AlbumList from '../../common/AlbumList'
-import SearchItem from '../../common/SearchItem'
+import AlbumList from '../../components/AlbumList'
+import SearchItem from '../../components/SearchItem'
 // import TopHistorySearch from '../../common/TopHistorySearch'
 import './Search.scss'
 

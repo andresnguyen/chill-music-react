@@ -1,5 +1,5 @@
 import React from 'react'
-import SongItemRectangle from '../../common/SongItemRectangle'
+import SongItemRectangle from '../../components/SongItemRectangle'
 import './Album.scss'
 const dataTest = [
     {

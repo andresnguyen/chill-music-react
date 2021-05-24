@@ -2,8 +2,8 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react'
-import ArtistSongList from '../../common/ArtistSongList'
-import ButtonPlay from '../../common/ButtonPlay'
+import ArtistSongList from '../../components/ArtistSongList'
+import ButtonPlay from '../../components/ButtonPlay'
 // import PropTypes from 'prop-types';
 import './Artist.scss'
 Artist.propTypes = {}

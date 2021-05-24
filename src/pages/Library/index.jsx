@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonPlay from '../../common/ButtonPlay'
+import ButtonPlay from '../../components/ButtonPlay'
 import './Library.scss'
 Library.propTypes = {}
 

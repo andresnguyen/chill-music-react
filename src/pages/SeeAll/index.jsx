@@ -1,5 +1,5 @@
 import React from 'react'
-import AlbumItem from '../../common/AlbumItem'
+import AlbumItem from '../../components/AlbumItem'
 import './SeeAll.scss'
 const dataTest = [
     {

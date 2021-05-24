@@ -28,7 +28,7 @@ function ButtonPlay() {
                         points="
 73.5,62.5 148.5,105.8 73.5,149.1 "
                     />
-                    <circle
+                    {/* <circle
                         className="button-play-circle"
                         id="XMLID_17_"
                         fill="none"
@@ -39,7 +39,7 @@ function ButtonPlay() {
                         cx="106.8"
                         cy="106.8"
                         r="103.3"
-                    />
+                    /> */}
                 </svg>
             </a>
         </div>
