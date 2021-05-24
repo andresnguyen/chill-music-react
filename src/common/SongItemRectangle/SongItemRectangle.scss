@@ -1,0 +1,86 @@
+.songitemrectangle-card {
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    position: relative;
+    top: 0;
+    transition: all 0.1s ease-in;
+    align-items: center;
+    height: 100%;
+}
+.songitemrectangle-num {
+    position: relative;
+    width: 35px;
+    text-align: center;
+}
+.songitemrectangle-card .thumb {
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    background-position: center center;
+    margin: 1% 1% 1% 0%;
+}
+.songitemrectangle-card:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.songitemrectangle-card:hover .song-icon-play {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+.song-icon-play {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    // transition: all 0.1s;
+}
+.songitemrectangle-no {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.songitemrectangle-card:hover .songitemrectangle-no {
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+.songitemrectangle-card article {
+    margin-left: 5px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.songitemrectangle-card .songitemrectangle-title {
+    font-size: 14px;
+    line-height: 1;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    flex: 4;
+}
+.songitemrectangle-card .songitemrectangle-author {
+    font-size: 10px;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    flex: 2;
+}
+.songitemrectangle-card span {
+    font-size: 8px;
+    font-weight: bold;
+    color: rgb(216, 216, 216);
+    letter-spacing: 0.05em;
+    flex: 1;
+}
+
+// // @media (min-width: 60em) {
+// //     .item-1 {
+// //         grid-column: 1 / span 2;
+// //     }
+// //     .item-1 h1 {
+// //         font-size: 24px;
+// //     }
+// // }

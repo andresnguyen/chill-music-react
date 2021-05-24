@@ -4,7 +4,7 @@ import './ItemRectangle.scss'
 function ItemRectangle(props) {
     const dataItem = props?.album
     return (
-        <div className="songitemrectangle-card">
+        <div className="itemrectangle-card">
             <div
                 className="thumb"
                 style={{
@@ -15,7 +15,7 @@ function ItemRectangle(props) {
                 <h1>{dataItem.title}</h1>
                 <span>{dataItem.desc}</span>
             </article>
-            <div className="songitemrectangle-act">
+            <div className="itemrectangle-act">
                 <ButtonPlay />
             </div>
         </div>
