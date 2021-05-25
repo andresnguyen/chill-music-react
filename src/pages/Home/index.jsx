@@ -1,6 +1,6 @@
 import React from 'react'
-import AlbumContainer from '../../common/AlbumContainer'
-import PlayListCarousel from '../../common/PlayListCarousel'
+import AlbumContainer from '../../components/AlbumContainer'
+import PlayListCarousel from '../../components/PlayListCarousel'
 import './Home.scss'
 
 Home.propTypes = {}

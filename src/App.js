@@ -2,9 +2,9 @@ import './assets/css/app.css'
 import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom'
 import routes from './app/route'
 import { Suspense } from 'react'
-import LoaderPage from './common/Loader'
+import LoaderPage from './components/Loader'
 import 'animate.css/animate.min.css'
-import PlayMusic from './common/PlayMusic'
+import PlayMusic from './components/PlayMusic'
 
 const PrivateRoute = () => <Redirect to="/sigin" />
 

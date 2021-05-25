@@ -1,8 +1,8 @@
-import Header from '../common/Header'
-import PlayerQueue from '../common/PlayerQueue'
+import Header from '../components/Header'
+import PlayerQueue from '../components/PlayerQueue'
 import { Helmet } from 'react-helmet'
 import './SecurityLayout.scss'
-import Sidebar from '../common/Sidebar'
+import Sidebar from '../components/Sidebar'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 

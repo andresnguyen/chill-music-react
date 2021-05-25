@@ -39,15 +39,17 @@
     --dark: rgba(white, 0.6);
     --darker: rgba(white, 0.8);
 }
-.albumpage-background + .albumpage-section .bookmark {
-    border-color: rgba(255, 255, 255, 0.2);
-}
+// .albumpage-background + .albumpage-section .bookmark {
+//     border-color: rgba(255, 255, 255, 0.2);
+// }
 .albumpage-background + .albumpage-section .bookmark svg {
     fill: #fff;
 }
 .albumpage-background + .albumpage-section .album-tracks {
     background: rgba(255, 255, 255, 0.1);
     border: none;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
 }
 
 .albumpage-section {
@@ -89,6 +91,7 @@
     padding: 10px;
     text-transform: uppercase;
     flex: 1 0 50%;
+    cursor: pointer;
 }
 .albumpage-section .bookmark {
     display: flex;
@@ -98,8 +101,11 @@
     align-content: initial;
     width: 48px;
     height: 48px;
-    border: 3px solid var(--color-light);
+    // border: 3px solid var(--color-light);
     margin-left: 10px;
+}
+.heart-icon path {
+    fill: rgb(212, 28, 28);
 }
 .albumpage-section .album-details > * {
     padding: 10px 0;
@@ -168,48 +174,48 @@
         margin: 100px 20px 20px 20px;
         padding: 20px 16px;
     }
-    .albumpage-section ol {
-        padding: 16px;
-    }
+    // .albumpage-section ol {
+    //     padding: 16px;
+    // }
 }
 
-ol {
-    list-style-type: none;
-    padding: 20px 36px;
-    font-weight: 500;
-}
-ol li {
-    counter-increment: number;
-    display: flex;
-    flex-wrap: initial;
-    justify-content: space-between;
-    align-items: center;
-    align-content: initial;
-    height: 45px;
-    color: var(--dark);
-}
-ol li span:not(:last-child) {
-    margin-right: 2em;
-}
-@media (max-width: 700px) {
-    ol li span:not(:last-child) {
-        margin-right: 1em;
-    }
-}
-ol li span:first-child {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: var(--darker);
-}
-ol li span:first-child:before {
-    content: counter(number);
-    margin-right: 2em;
-    color: var(--dark);
-    display: inline-block;
-    text-align: end;
-    width: 20px;
-}
+// ol {
+//     list-style-type: none;
+//     padding: 20px 36px;
+//     font-weight: 500;
+// }
+// ol li {
+//     counter-increment: number;
+//     display: flex;
+//     flex-wrap: initial;
+//     justify-content: space-between;
+//     align-items: center;
+//     align-content: initial;
+//     height: 45px;
+//     color: var(--dark);
+// }
+// ol li span:not(:last-child) {
+//     margin-right: 2em;
+// }
+// @media (max-width: 700px) {
+//     ol li span:not(:last-child) {
+//         margin-right: 1em;
+//     }
+// }
+// ol li span:first-child {
+//     white-space: nowrap;
+//     text-overflow: ellipsis;
+//     overflow: hidden;
+//     color: var(--darker);
+// }
+// ol li span:first-child:before {
+//     content: counter(number);
+//     margin-right: 2em;
+//     color: var(--dark);
+//     display: inline-block;
+//     text-align: end;
+//     width: 20px;
+// }
 
 .actions {
     display: flex;

@@ -1,11 +1,5 @@
-// :root {
-//     --song-height: 70px;
-// }
-
 .songitemrectangle-card {
-    background: rgb(250, 250, 250);
     text-decoration: none;
-    color: #444;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
@@ -13,49 +7,73 @@
     position: relative;
     top: 0;
     transition: all 0.1s ease-in;
+    align-items: center;
     height: 100%;
 }
+.songitemrectangle-num {
+    position: relative;
+    width: 35px;
+    text-align: center;
+}
 .songitemrectangle-card .thumb {
-    width: var(--song-height);
+    width: 35px;
+    height: 35px;
     background-size: cover;
     background-position: center center;
-    margin: 1% 1% 1% 1%;
+    margin: 1% 1% 1% 0%;
 }
 .songitemrectangle-card:hover {
     top: -2px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
-.songitemrectangle-act {
+
+.songitemrectangle-card:hover .song-icon-play {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+.song-icon-play {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    // transition: all 0.1s;
+}
+.songitemrectangle-no {
     position: absolute;
-    z-index: 6;
-    bottom: 0;
-    right: 0;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
+}
+.songitemrectangle-card:hover .songitemrectangle-no {
+    visibility: hidden !important;
+    opacity: 0 !important;
 }
 
 .songitemrectangle-card article {
-    // padding: 20px;
     margin-left: 5px;
     flex: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
 }
-.songitemrectangle-card h1 {
+.songitemrectangle-card .songitemrectangle-title {
     font-size: 14px;
     line-height: 1;
     margin: 0;
-    color: #333;
+    color: rgb(255, 255, 255);
+    flex: 4;
+}
+.songitemrectangle-card .songitemrectangle-author {
+    font-size: 10px;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    flex: 2;
 }
 .songitemrectangle-card span {
     font-size: 8px;
     font-weight: bold;
-    color: #999;
-    // text-transform: uppercase;
+    color: rgb(216, 216, 216);
     letter-spacing: 0.05em;
-    margin: 1em 0 0 0;
+    flex: 1;
 }
 
 // // @media (min-width: 60em) {
