@@ -11,6 +11,7 @@ const SeeAll = lazy(() => import('../pages/SeeAll'))
 const UserPlaylist = lazy(() => import('../pages/UserPlaylist'))
 const Artist = lazy(() => import('../pages/Artist'))
 const Album = lazy(() => import('../pages/Album'))
+const Profile = lazy(() => import('../pages/Profile'))
 
 const route = [
     {
@@ -84,6 +85,14 @@ const route = [
         layout: BlankLayout,
         title: 'Đăng Nhập',
         main: (props) => <SignIn router={props} />,
+    },
+    {
+        path: '/user',
+        exact: true,
+        auth: false,
+        layout: SecurityLayout,
+        title: 'Profile',
+        main: (props) => <Profile router={props} />,
     },
 ]
 

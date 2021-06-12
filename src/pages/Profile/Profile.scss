@@ -1,0 +1,15 @@
+.profile {
+    margin-top: 20px;
+    padding-left: 30px;
+    color: var(--text-color-1);
+    background-color: var(background-color-1);
+
+    &-form-wrapper {
+        margin-top: 120px;
+        max-width: 500px;
+    }
+    &-title {
+        margin-bottom: 20px;
+        font-size: 26px;
+    }
+}

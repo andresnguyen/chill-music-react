@@ -18,7 +18,7 @@ function Header() {
                     </article>
 
                     <article id="reference">
-                        <Link to="" className="btn-signup">
+                        <Link to="/user" className="btn-signup">
                             Đăng ký
                         </Link>
                         <Link to="" className="btn-login">
