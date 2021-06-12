@@ -5,6 +5,7 @@ import './ProfileInfoForm.scss'
 import { Link } from 'react-router-dom'
 import { Form, Input, Button, Radio, Select, DatePicker } from 'antd'
 import { useState } from 'react'
+import { MonochromePhotosTwoTone } from '@material-ui/icons'
 const { Option } = Select
 
 Profile.propTypes = {}
@@ -15,72 +16,83 @@ function Profile(props) {
     const onFinish = async (values) => {
         console.log(values)
     }
+    const initialValues = {
+        fullname: '',
+        email: '',
+        gender: 1,
+
+        dayOfBirth: {
+            day: 1,
+            month: 1,
+            year: 1999,
+        },
+    }
 
     return (
-        <Form labelCol={{ span: 4 }} size="large" form={form} initialValues={{}} onFinish={onFinish}>
-            <Form.Item label="Fullname">
-                <Input placeholder="input placeholder" />
+        <Form
+            layout="vertical"
+            initialValues={initialValues}
+            labelCol={{ span: 4 }}
+            size="large"
+            form={form}
+            onFinish={onFinish}
+            requiredMark={false}
+            validateTrigger="onBlur"
+        >
+            <Form.Item label="Fullname" name="fullname" rules={[{ required: true }]}>
+                <Input />
             </Form.Item>
-            <Form.Item label="Email">
-                <Input placeholder="input placeholder" />
+            <Form.Item label="Email" name="email" rules={[{ required: true }]}>
+                <Input />
             </Form.Item>
-            <Form.Item
-                name="gender"
-                label="Gender"
-                rules={[
-                    {
-                        required: true,
-                    },
-                ]}
-            >
-                <Select placeholder="Select a option and change input text above" allowClear>
-                    <Option value="male">male</Option>
-                    <Option value="female">female</Option>
-                    <Option value="other">other</Option>
+            <Form.Item name="gender" label="Gender" rules={[{ required: true }]}>
+                <Select>
+                    <Option value={1}>Nam</Option>
+                    <Option value={2}>Nữ</Option>
                 </Select>
             </Form.Item>
 
-            <Form.Item label="BirthDate" style={{ marginBottom: 0 }}>
+            <Form.Item name="dayOfBirth" label="BirthDate" rules={[{ required: true }]}>
                 <Form.Item
-                    name="day"
+                    name={['dayOfBirth', 'day']}
                     rules={[{ required: true }]}
                     style={{ display: 'inline-block', width: 'calc(33.33% - 8px)' }}
                 >
-                    <Input placeholder="Input birth year" />
+                    <Input placeholder="Ngày sinh" />
                 </Form.Item>
 
                 <Form.Item
-                    name="month"
                     rules={[{ required: true }]}
                     style={{ display: 'inline-block', width: 'calc(33.33% - 8px)', margin: '0 8px' }}
+                    name={['dayOfBirth', 'month']}
                 >
-                    <Select placeholder="Select a option and change input text above" defaultValue="1">
-                        <Option value="1">Tháng 1</Option>
-                        <Option value="2">Tháng 2</Option>
-                        <Option value="3">Tháng 3</Option>
-                        <Option value="4">Tháng 4</Option>
-                        <Option value="5">Tháng 5</Option>
-                        <Option value="6">Tháng 6</Option>
-                        <Option value="7">Tháng 7</Option>
-                        <Option value="8">Tháng 8</Option>
-                        <Option value="9">Tháng 9</Option>
-                        <Option value="10">Tháng 10</Option>
-                        <Option value="11">Tháng 11</Option>
-                        <Option value="12">Tháng 12</Option>
+                    <Select>
+                        <Option value={1}>Tháng 1</Option>
+                        <Option value={2}>Tháng 2</Option>
+                        <Option value={3}>Tháng 3</Option>
+                        <Option value={4}>Tháng 4</Option>
+                        <Option value={5}>Tháng 5</Option>
+                        <Option value={6}>Tháng 6</Option>
+                        <Option value={7}>Tháng 7</Option>
+                        <Option value={8}>Tháng 8</Option>
+                        <Option value={9}>Tháng 9</Option>
+                        <Option value={10}>Tháng 10</Option>
+                        <Option value={11}>Tháng 11</Option>
+                        <Option value={12}>Tháng 12</Option>
                     </Select>
                 </Form.Item>
 
                 <Form.Item
-                    name="year"
+                    name={['dayOfBirth', 'year']}
                     rules={[{ required: true }]}
                     style={{ display: 'inline-block', width: 'calc(33.33%)' }}
                 >
-                    <Input placeholder="Input birth month" />
+                    <Input placeholder="Năm sinh" />
                 </Form.Item>
             </Form.Item>
 
             <Form.Item>
-                <Button type="primary" htmlType="submit" style={{ width: '190px' }}>
+                <Button type="primary" htmlType="submit">
                     Submit
                 </Button>
             </Form.Item>
