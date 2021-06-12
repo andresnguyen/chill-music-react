@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import './assets/css/base.css'
 import './assets/css/grid.css'
 import './assets/css/index.css'
+import 'antd/dist/antd.css'
 
 // import store from './app/store'
 import { Provider } from 'react-redux'
