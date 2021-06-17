@@ -1,7 +1,8 @@
 import { all } from 'redux-saga/effects'
 import authWatcher from './auth.saga'
-import getCurrentListWatcher from './playMusic.saga'
-
+import playMusic from './playMusic.saga'
+import { configAxios } from '../api/configAxios'
 export default function* rootSaga() {
-    yield all([getCurrentListWatcher(), authWatcher()])
+    configAxios()
+    yield all([playMusic(), authWatcher()])
 }

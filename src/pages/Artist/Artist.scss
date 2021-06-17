@@ -144,3 +144,28 @@
     width: var(--size);
     height: var(--size);
 }
+.artist-song-top {
+    // background: #f2f4f8;
+    display: flex;
+    justify-content: flex-start;
+    // justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+// @media only screen and (min-width: 1500px) {
+//     .artist-song-top {
+//         display: block;
+//     }
+// }
+// @for $i from 1 through 36 {
+//     .test12333:#{$i}::after {
+//         content: '$i == #{$i}';
+//         margin-left: 50px;
+//         display: none;
+//         // multiply by 10 for larger hue increments
+//         background: hsl($i * 10, 50%, 50%);
+//     }
+// }
+// .artist-song-top {
+//     // display: none;
+// }

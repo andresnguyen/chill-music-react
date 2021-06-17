@@ -24,11 +24,20 @@ function Sidebar() {
                     <span>Tìm kiếm</span>
                 </NavLink>
 
-                <NavLink className="sidenav-item" activeClassName="sidenav-item--active" exact to="/library">
+                <NavLink className="sidenav-item" activeClassName="sidenav-item--active" to="/library">
                     <i className="fal fa-stream"></i>
                     <span>Thư viện</span>
                 </NavLink>
-
+                <div className="sidenav-user-list">
+                    <NavLink className="sidenav-item" activeClassName="sidenav-item--active" to="/playlist/new">
+                        <i className="fal fa-plus-square"></i>
+                        <span>Tạo playlist</span>
+                    </NavLink>
+                    <NavLink className="sidenav-item" activeClassName="sidenav-item--active" exact to="/album">
+                        <i className="fal fa-heart"></i>
+                        <span>Bài hát đã thích</span>
+                    </NavLink>
+                </div>
                 {/* <NavLink className="sidenav-item" activeClassName="sidenav-item--active" exact to="/history">
                     <i className="fal fa-history"></i>
                     <span>Lịch sử</span>

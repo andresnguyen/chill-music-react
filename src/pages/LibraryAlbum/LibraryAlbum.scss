@@ -1,0 +1,17 @@
+.library-album-wrapper {
+    padding: 20px 32px;
+}
+.library-album-title {
+    margin: 0 0 20px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 28px;
+    text-transform: none;
+}
+.library-album-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}

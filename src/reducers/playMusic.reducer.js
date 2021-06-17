@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+// import { TrainOutlined } from '@material-ui/icons'
 import {
     CHANGE_CURRENT_INDEX,
     CHANGE_SONGS,
@@ -6,6 +7,9 @@ import {
     TOGGLE_OPEN,
     TOGGLE_PLAY,
     TOGGLE_RANDOM,
+    CLICK_PLAY_SONGS,
+    CLICK_PLAY_SONGS_SUCCESS,
+    CLICK_PLAY_SONGS_SUCCESS_PLAY,
 } from '../actions/playMusic'
 
 const songs = JSON.parse(localStorage.getItem('songs')) || []
@@ -19,6 +23,7 @@ const initialState = {
     isRandom,
     isLoading: false,
     isPlaying: false,
+    isPlayingNew: false,
 }
 
 const playMusicReducer = (state = initialState, { type, payload }) => {
@@ -110,6 +115,26 @@ const playMusicReducer = (state = initialState, { type, payload }) => {
                 ...state,
                 currentIndex: index,
             }
+        case CLICK_PLAY_SONGS:
+            return {
+                ...state,
+                loading: true,
+            }
+        case CLICK_PLAY_SONGS_SUCCESS: {
+            state.songs = payload.data
+            return {
+                ...state,
+                isPlayingNew: !state.isPlayingNew,
+                isPlaying: true,
+            }
+        }
+        case CLICK_PLAY_SONGS_SUCCESS_PLAY: {
+            console.log('log CLICK_PLAY_SONGS_SUCCESS_PLAY: ')
+            return {
+                ...state,
+                isPlaying: true,
+            }
+        }
         default:
             return state
     }

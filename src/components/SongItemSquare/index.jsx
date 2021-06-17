@@ -1,7 +1,8 @@
 import React from 'react'
 import './SongItemSquare.scss'
-import ButtonPlay from '../ButtonPlay'
-function SongItemSquare() {
+// import ButtonPlay from '../ButtonPlay'
+function SongItemSquare(props) {
+    const dataItem = props?.album
     return (
         <div className="test123">
             <div>
@@ -9,17 +10,22 @@ function SongItemSquare() {
                     <div
                         className="thumb"
                         style={{
-                            backgroundImage: `url(https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/5085b7a0d80811eaac7adb7ae8cc1536.png)`,
+                            backgroundImage: `url(${dataItem?.img})`,
                         }}
                     />
                     <article>
-                        <h1>To the moon</h1>
-                        <span>Đen Vâu</span>
+                        <h1>{dataItem?.title}</h1>
+                        <span>{dataItem?.desc}</span>
                     </article>
                     <div className="songitemsquare-act">
-                        <div className="songitemsquare-button-play">
-                            <ButtonPlay />
+                        <div className="songitemsquare-act__tool">
+                            <button className="button-play">
+                                <i className="fas fa-play"></i>
+                            </button>
                         </div>
+                        {/* <div className="songitemsquare-button-play" id="hoverShow1">
+                            <ButtonPlay />
+                        </div> */}
                     </div>
                 </div>
             </div>

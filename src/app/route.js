@@ -6,9 +6,12 @@ const SignIn = lazy(() => import('../pages/SignIn'))
 const Home = lazy(() => import('../pages/Home'))
 const Search = lazy(() => import('../pages/Search'))
 const Library = lazy(() => import('../pages/Library'))
+const LibraryAlbum = lazy(() => import('../pages/LibraryAlbum'))
+const LibraryArtist = lazy(() => import('../pages/LibraryArtist'))
 const History = lazy(() => import('../pages/History'))
 const SeeAll = lazy(() => import('../pages/SeeAll'))
 const UserPlaylist = lazy(() => import('../pages/UserPlaylist'))
+const CreatePlaylist = lazy(() => import('../pages/CreatePlaylist'))
 const Artist = lazy(() => import('../pages/Artist'))
 const Album = lazy(() => import('../pages/Album'))
 
@@ -38,6 +41,22 @@ const route = [
         main: (props) => <Library router={props} />,
     },
     {
+        path: '/library/albums',
+        exact: true,
+        auth: false,
+        layout: SecurityLayout,
+        title: 'Thư viện',
+        main: (props) => <LibraryAlbum router={props} />,
+    },
+    {
+        path: '/library/artists',
+        exact: true,
+        auth: false,
+        layout: SecurityLayout,
+        title: 'Thư viện',
+        main: (props) => <LibraryArtist router={props} />,
+    },
+    {
         path: '/artist',
         exact: true,
         auth: false,
@@ -60,6 +79,14 @@ const route = [
         layout: SecurityLayout,
         title: 'Danh sách nhạc',
         main: (props) => <UserPlaylist router={props} />,
+    },
+    {
+        path: '/playlist/new',
+        exact: true,
+        auth: false,
+        layout: SecurityLayout,
+        title: 'Tạo Playlist',
+        main: (props) => <CreatePlaylist router={props} />,
     },
     {
         path: '/history',
