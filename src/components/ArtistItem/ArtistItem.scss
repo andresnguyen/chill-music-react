@@ -4,7 +4,7 @@
     cursor: pointer;
     // background-color: #b3aeae;
     &:hover {
-        background-color: #e2e3ee;
+        background-color: #f0f0f3;
     }
 
     &:hover &__tool {
@@ -94,6 +94,9 @@
         }
     }
 }
-.test {
-    width: 18%;
+.artist-item-wrapper {
+    width: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
 }

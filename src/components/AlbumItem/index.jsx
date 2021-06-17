@@ -1,5 +1,6 @@
 import React from 'react'
 import './AlbumItem.scss'
+import { useHistory } from 'react-router-dom'
 import PropTypes from 'prop-types'
 // import img from '../../assets/img/artist.jpg'
 AlbumItem.propTypes = {
@@ -10,9 +11,10 @@ AlbumItem.defaultProps = {
 }
 function AlbumItem({ album }) {
     // const url = `url(${img})`
+    const history = useHistory()
     const { img, title, desc } = album
     return (
-        <div className="album-item">
+        <div className="album-item" onClick={() => history.push('/album')}>
             <div className="img-wrapper" style={{ backgroundImage: `url(${img})` }}>
                 <div className="album-item__tool animate__fadeInUp">
                     {/* <i className="fas fa-heart"></i>  */}

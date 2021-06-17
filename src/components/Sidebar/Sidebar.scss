@@ -58,3 +58,28 @@
 .sidenav span {
     margin-left: 10px;
 }
+.sidenav-user-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 0;
+
+    --left-sidebar-item-height: 32px;
+    --left-sidebar-padding-left: 24px;
+    --left-sidebar-padding-right: 24px;
+    --left-sidebar-item-pill-horizontal-padding: 7px;
+    --left-sidebar-item-indentation-width: 16px;
+    --left-sidebar-edit-input-height: 26px;
+    -ms-flex-positive: 1;
+    -ms-flex-negative: 0;
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-top: 24px;
+    position: relative;
+}

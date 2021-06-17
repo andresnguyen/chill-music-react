@@ -38,6 +38,7 @@ function PlayMusic() {
     }
 
     const isPlaying = useSelector((state) => state.playMusicReducer.isPlaying)
+    const isPlayingNew = useSelector((state) => state.playMusicReducer.isPlayingNew)
 
     function setIsPlaying(value) {
         dispatch(togglePlay(value))
@@ -79,6 +80,11 @@ function PlayMusic() {
         HandlePlayMode()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentIndex])
+    useEffect(() => {
+        console.log('thay đổi ở playmusic')
+        audioRef.current.play()
+        console.log(isPlayingNew)
+    }, [isPlayingNew])
 
     // check every volume change
     useEffect(() => {

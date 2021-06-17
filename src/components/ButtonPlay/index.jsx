@@ -1,11 +1,19 @@
 import React from 'react'
 import './ButtonPlay.scss'
+import { useDispatch } from 'react-redux'
+import { clickPlaySongs } from '../../actions/playMusic'
 ButtonPlay.propTypes = {}
 
 function ButtonPlay() {
+    const dispatch = useDispatch()
+
+    const handlePlayClick = () => {
+        let value = 'haha thuan da ơ đây'
+        dispatch(clickPlaySongs(value))
+    }
     return (
-        <div className="button-play-container">
-            <a href="/" className="button-play-playBut">
+        <div className="button-play-container" onClick={handlePlayClick}>
+            <div className="button-play-playBut">
                 {/* Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In  */}
                 <svg
                     version="1.1"
@@ -41,7 +49,7 @@ function ButtonPlay() {
                         r="103.3"
                     /> */}
                 </svg>
-            </a>
+            </div>
         </div>
     )
 }

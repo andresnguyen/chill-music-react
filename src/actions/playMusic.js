@@ -12,6 +12,11 @@ export const TOGGLE_PLAY = 'TOGGLE_PLAY'
 
 export const SONG_CLICK = 'SONG_CLICK'
 
+//sharkdev
+export const CLICK_PLAY_SONGS = 'CLICK_PLAY_SONGS'
+export const CLICK_PLAY_SONGS_SUCCESS = 'CLICK_PLAY_SONGS_SUCCESS'
+export const CLICK_PLAY_SONGS_SUCCESS_PLAY = 'CLICK_PLAY_SONGS_SUCCESS_PLAY'
+export const CLICK_PLAY_SONGS_FAIL = 'CLICK_PLAY_SONGS_FAIL'
 export const songClick = (payload) => ({
     type: SONG_CLICK,
     payload,
@@ -39,6 +44,11 @@ export const changeCurrentIndex = (payload) => ({
 
 export const changeSongs = (payload) => ({
     type: CHANGE_SONGS,
+    payload,
+})
+
+export const clickPlaySongs = (payload) => ({
+    type: CLICK_PLAY_SONGS,
     payload,
 })
 

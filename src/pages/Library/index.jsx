@@ -701,7 +701,7 @@ function Library() {
                 {dataTest.map((value, index) => {
                     return (
                         <div className={`item-${index + 1}`} key={index}>
-                            <a href="/" className="card">
+                            <div className="card">
                                 <div
                                     className="thumb"
                                     style={{
@@ -716,7 +716,7 @@ function Library() {
                                 <div className="library-act">
                                     <ButtonPlay />
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     )
                 })}

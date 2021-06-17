@@ -1,0 +1,34 @@
+.library-header-wrapper {
+    // padding-left: 32px;
+}
+.library-header-tab {
+    display: inline-block;
+    margin: 0 8px 0 0;
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    margin: 0 8px;
+    padding: 12px 20px;
+    position: relative;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 16px;
+    text-transform: none;
+}
+.library-header-tab_selected {
+    background-color: #333;
+    margin: 0 8px 0 0;
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    padding: 12px 20px;
+    position: relative;
+    text-decoration: none;
+}
+.library-header-tab-link {
+    color: white;
+    text-decoration: none;
+}
